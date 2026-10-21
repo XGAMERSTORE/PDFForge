@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word zu PDF</string>
+    <string name="word_pdf_desc">DOCX-Text und einfache Tabellen als PDF</string>
+    <string name="pdf_word">PDF zu Word</string>
+    <string name="pdf_word_desc">Bearbeitbares DOCX aus PDF-Text erstellen</string>
+    <string name="word_text">Word zu Text</string>
+    <string name="word_text_desc">DOCX-Inhalt als TXT exportieren</string>
+    <string name="text_pdf">Text zu PDF</string>
+    <string name="text_pdf_desc">TXT-Datei als PDF speichern</string>
+    <string name="excel_pdf">Excel zu PDF</string>
+    <string name="excel_pdf_desc">Erstes XLSX-Tabellenblatt als PDF</string>
+    <string name="excel_csv">Excel zu CSV</string>
+    <string name="excel_csv_desc">Erstes Tabellenblatt als CSV exportieren</string>
+    <string name="csv_excel">CSV zu Excel</string>
+    <string name="csv_excel_desc">Bearbeitbare XLSX-Datei aus CSV</string>
+    <string name="csv_pdf">CSV zu PDF</string>
+    <string name="csv_pdf_desc">CSV-Zeilen als PDF speichern</string>
+    <string name="powerpoint_pdf">PowerPoint zu PDF</string>
+    <string name="powerpoint_pdf_desc">Präsentationstext als PDF exportieren</string>
+</resources>

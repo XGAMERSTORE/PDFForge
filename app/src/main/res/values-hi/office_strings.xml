@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word से PDF</string>
+    <string name="word_pdf_desc">DOCX टेक्स्ट और सरल तालिकाएं PDF में</string>
+    <string name="pdf_word">PDF से Word</string>
+    <string name="pdf_word_desc">PDF टेक्स्ट से संपादन योग्य DOCX</string>
+    <string name="word_text">Word से टेक्स्ट</string>
+    <string name="word_text_desc">DOCX सामग्री TXT में निर्यात करें</string>
+    <string name="text_pdf">टेक्स्ट से PDF</string>
+    <string name="text_pdf_desc">TXT को PDF में बदलें</string>
+    <string name="excel_pdf">Excel से PDF</string>
+    <string name="excel_pdf_desc">पहली XLSX शीट को PDF बनाएं</string>
+    <string name="excel_csv">Excel से CSV</string>
+    <string name="excel_csv_desc">पहली शीट को CSV में बदलें</string>
+    <string name="csv_excel">CSV से Excel</string>
+    <string name="csv_excel_desc">CSV से संपादन योग्य XLSX बनाएं</string>
+    <string name="csv_pdf">CSV से PDF</string>
+    <string name="csv_pdf_desc">CSV पंक्तियों से PDF बनाएं</string>
+    <string name="powerpoint_pdf">PowerPoint से PDF</string>
+    <string name="powerpoint_pdf_desc">स्लाइड टेक्स्ट को PDF में बदलें</string>
+</resources>

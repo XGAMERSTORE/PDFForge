@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word у PDF</string>
+    <string name="word_pdf_desc">Текст і прості таблиці DOCX у PDF</string>
+    <string name="pdf_word">PDF у Word</string>
+    <string name="pdf_word_desc">Створити редагований DOCX із тексту PDF</string>
+    <string name="word_text">Word у текст</string>
+    <string name="word_text_desc">Експортувати DOCX у TXT</string>
+    <string name="text_pdf">Текст у PDF</string>
+    <string name="text_pdf_desc">Перетворити TXT на PDF</string>
+    <string name="excel_pdf">Excel у PDF</string>
+    <string name="excel_pdf_desc">Експорт першого аркуша XLSX у PDF</string>
+    <string name="excel_csv">Excel у CSV</string>
+    <string name="excel_csv_desc">Експорт першого аркуша в CSV</string>
+    <string name="csv_excel">CSV у Excel</string>
+    <string name="csv_excel_desc">Створити редагований XLSX із CSV</string>
+    <string name="csv_pdf">CSV у PDF</string>
+    <string name="csv_pdf_desc">Перетворити рядки CSV на PDF</string>
+    <string name="powerpoint_pdf">PowerPoint у PDF</string>
+    <string name="powerpoint_pdf_desc">Експортувати текст слайдів у PDF</string>
+</resources>

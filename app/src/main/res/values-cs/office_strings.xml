@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word do PDF</string>
+    <string name="word_pdf_desc">Převod textu a jednoduchých tabulek DOCX</string>
+    <string name="pdf_word">PDF do Wordu</string>
+    <string name="pdf_word_desc">Vytvoření upravitelného DOCX z textu PDF</string>
+    <string name="word_text">Word do textu</string>
+    <string name="word_text_desc">Export obsahu DOCX do TXT</string>
+    <string name="text_pdf">Text do PDF</string>
+    <string name="text_pdf_desc">Převod souboru TXT do PDF</string>
+    <string name="excel_pdf">Excel do PDF</string>
+    <string name="excel_pdf_desc">Export prvního listu XLSX do PDF</string>
+    <string name="excel_csv">Excel do CSV</string>
+    <string name="excel_csv_desc">Export prvního listu do CSV</string>
+    <string name="csv_excel">CSV do Excelu</string>
+    <string name="csv_excel_desc">Vytvoření upravitelného XLSX z CSV</string>
+    <string name="csv_pdf">CSV do PDF</string>
+    <string name="csv_pdf_desc">Převod řádků CSV do PDF</string>
+    <string name="powerpoint_pdf">PowerPoint do PDF</string>
+    <string name="powerpoint_pdf_desc">Export textu prezentace do PDF</string>
+</resources>

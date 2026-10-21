@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word\'den PDF\'ye</string>
+    <string name="word_pdf_desc">DOCX metnini ve basit tabloları dönüştür</string>
+    <string name="pdf_word">PDF\'den Word\'e</string>
+    <string name="pdf_word_desc">PDF metninden düzenlenebilir DOCX oluştur</string>
+    <string name="word_text">Word\'den metne</string>
+    <string name="word_text_desc">DOCX içeriğini TXT olarak dışa aktar</string>
+    <string name="text_pdf">Metinden PDF\'ye</string>
+    <string name="text_pdf_desc">TXT dosyasını PDF\'ye dönüştür</string>
+    <string name="excel_pdf">Excel\'den PDF\'ye</string>
+    <string name="excel_pdf_desc">İlk XLSX sayfasını PDF yap</string>
+    <string name="excel_csv">Excel\'den CSV\'ye</string>
+    <string name="excel_csv_desc">İlk sayfayı CSV olarak dışa aktar</string>
+    <string name="csv_excel">CSV\'den Excel\'e</string>
+    <string name="csv_excel_desc">CSV\'den düzenlenebilir XLSX oluştur</string>
+    <string name="csv_pdf">CSV\'den PDF\'ye</string>
+    <string name="csv_pdf_desc">CSV satırlarını PDF\'ye dönüştür</string>
+    <string name="powerpoint_pdf">PowerPoint\'ten PDF\'ye</string>
+    <string name="powerpoint_pdf_desc">Sunum metnini PDF\'ye dönüştür</string>
+</resources>

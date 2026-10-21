@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word till PDF</string>
+    <string name="word_pdf_desc">Konvertera DOCX-text och enkla tabeller</string>
+    <string name="pdf_word">PDF till Word</string>
+    <string name="pdf_word_desc">Skapa redigerbar DOCX från PDF-text</string>
+    <string name="word_text">Word till text</string>
+    <string name="word_text_desc">Exportera DOCX-innehåll som TXT</string>
+    <string name="text_pdf">Text till PDF</string>
+    <string name="text_pdf_desc">Konvertera TXT till PDF</string>
+    <string name="excel_pdf">Excel till PDF</string>
+    <string name="excel_pdf_desc">Exportera första XLSX-bladet till PDF</string>
+    <string name="excel_csv">Excel till CSV</string>
+    <string name="excel_csv_desc">Exportera första bladet som CSV</string>
+    <string name="csv_excel">CSV till Excel</string>
+    <string name="csv_excel_desc">Skapa redigerbar XLSX från CSV</string>
+    <string name="csv_pdf">CSV till PDF</string>
+    <string name="csv_pdf_desc">Konvertera CSV-rader till PDF</string>
+    <string name="powerpoint_pdf">PowerPoint till PDF</string>
+    <string name="powerpoint_pdf_desc">Exportera presentationstext som PDF</string>
+</resources>

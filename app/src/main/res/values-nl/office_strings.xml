@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word naar PDF</string>
+    <string name="word_pdf_desc">DOCX-tekst en eenvoudige tabellen naar PDF</string>
+    <string name="pdf_word">PDF naar Word</string>
+    <string name="pdf_word_desc">Bewerkbare DOCX maken uit PDF-tekst</string>
+    <string name="word_text">Word naar tekst</string>
+    <string name="word_text_desc">DOCX-inhoud exporteren als TXT</string>
+    <string name="text_pdf">Tekst naar PDF</string>
+    <string name="text_pdf_desc">TXT-bestand omzetten naar PDF</string>
+    <string name="excel_pdf">Excel naar PDF</string>
+    <string name="excel_pdf_desc">Eerste XLSX-werkblad naar PDF</string>
+    <string name="excel_csv">Excel naar CSV</string>
+    <string name="excel_csv_desc">Eerste werkblad exporteren als CSV</string>
+    <string name="csv_excel">CSV naar Excel</string>
+    <string name="csv_excel_desc">Bewerkbare XLSX maken uit CSV</string>
+    <string name="csv_pdf">CSV naar PDF</string>
+    <string name="csv_pdf_desc">CSV-rijen omzetten naar PDF</string>
+    <string name="powerpoint_pdf">PowerPoint naar PDF</string>
+    <string name="powerpoint_pdf_desc">Presentatietekst exporteren als PDF</string>
+</resources>

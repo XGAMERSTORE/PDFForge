@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word を PDF に</string>
+    <string name="word_pdf_desc">DOCX の文章と簡単な表を PDF に</string>
+    <string name="pdf_word">PDF を Word に</string>
+    <string name="pdf_word_desc">PDF のテキストから編集可能な DOCX を作成</string>
+    <string name="word_text">Word をテキストに</string>
+    <string name="word_text_desc">DOCX の内容を TXT に出力</string>
+    <string name="text_pdf">テキストを PDF に</string>
+    <string name="text_pdf_desc">TXT ファイルを PDF に変換</string>
+    <string name="excel_pdf">Excel を PDF に</string>
+    <string name="excel_pdf_desc">最初の XLSX シートを PDF に</string>
+    <string name="excel_csv">Excel を CSV に</string>
+    <string name="excel_csv_desc">最初のシートを CSV に出力</string>
+    <string name="csv_excel">CSV を Excel に</string>
+    <string name="csv_excel_desc">CSV から編集可能な XLSX を作成</string>
+    <string name="csv_pdf">CSV を PDF に</string>
+    <string name="csv_pdf_desc">CSV の行を PDF に変換</string>
+    <string name="powerpoint_pdf">PowerPoint を PDF に</string>
+    <string name="powerpoint_pdf_desc">スライドの文章を PDF に出力</string>
+</resources>

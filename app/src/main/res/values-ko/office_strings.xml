@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word를 PDF로</string>
+    <string name="word_pdf_desc">DOCX 텍스트와 간단한 표 변환</string>
+    <string name="pdf_word">PDF를 Word로</string>
+    <string name="pdf_word_desc">PDF 텍스트로 편집 가능한 DOCX 만들기</string>
+    <string name="word_text">Word를 텍스트로</string>
+    <string name="word_text_desc">DOCX 내용을 TXT로 내보내기</string>
+    <string name="text_pdf">텍스트를 PDF로</string>
+    <string name="text_pdf_desc">TXT 파일을 PDF로 변환</string>
+    <string name="excel_pdf">Excel을 PDF로</string>
+    <string name="excel_pdf_desc">첫 번째 XLSX 시트를 PDF로</string>
+    <string name="excel_csv">Excel을 CSV로</string>
+    <string name="excel_csv_desc">첫 번째 시트를 CSV로 내보내기</string>
+    <string name="csv_excel">CSV를 Excel로</string>
+    <string name="csv_excel_desc">CSV로 편집 가능한 XLSX 만들기</string>
+    <string name="csv_pdf">CSV를 PDF로</string>
+    <string name="csv_pdf_desc">CSV 행을 PDF로 변환</string>
+    <string name="powerpoint_pdf">PowerPoint를 PDF로</string>
+    <string name="powerpoint_pdf_desc">슬라이드 텍스트를 PDF로 내보내기</string>
+</resources>

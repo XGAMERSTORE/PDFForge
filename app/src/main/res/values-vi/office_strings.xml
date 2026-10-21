@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word sang PDF</string>
+    <string name="word_pdf_desc">Chuyển văn bản và bảng đơn giản DOCX</string>
+    <string name="pdf_word">PDF sang Word</string>
+    <string name="pdf_word_desc">Tạo DOCX có thể chỉnh sửa từ văn bản PDF</string>
+    <string name="word_text">Word sang văn bản</string>
+    <string name="word_text_desc">Xuất nội dung DOCX thành TXT</string>
+    <string name="text_pdf">Văn bản sang PDF</string>
+    <string name="text_pdf_desc">Đổi TXT thành PDF</string>
+    <string name="excel_pdf">Excel sang PDF</string>
+    <string name="excel_pdf_desc">Xuất trang tính XLSX đầu tiên thành PDF</string>
+    <string name="excel_csv">Excel sang CSV</string>
+    <string name="excel_csv_desc">Xuất trang tính đầu tiên thành CSV</string>
+    <string name="csv_excel">CSV sang Excel</string>
+    <string name="csv_excel_desc">Tạo XLSX có thể chỉnh sửa từ CSV</string>
+    <string name="csv_pdf">CSV sang PDF</string>
+    <string name="csv_pdf_desc">Chuyển hàng CSV thành PDF</string>
+    <string name="powerpoint_pdf">PowerPoint sang PDF</string>
+    <string name="powerpoint_pdf_desc">Xuất văn bản của slide thành PDF</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word 转 PDF</string>
+    <string name="word_pdf_desc">转换 DOCX 文本和简单表格</string>
+    <string name="pdf_word">PDF 转 Word</string>
+    <string name="pdf_word_desc">根据 PDF 文本创建可编辑 DOCX</string>
+    <string name="word_text">Word 转文本</string>
+    <string name="word_text_desc">将 DOCX 内容导出为 TXT</string>
+    <string name="text_pdf">文本转 PDF</string>
+    <string name="text_pdf_desc">将 TXT 文件转换为 PDF</string>
+    <string name="excel_pdf">Excel 转 PDF</string>
+    <string name="excel_pdf_desc">将第一个 XLSX 工作表导出为 PDF</string>
+    <string name="excel_csv">Excel 转 CSV</string>
+    <string name="excel_csv_desc">将第一个工作表导出为 CSV</string>
+    <string name="csv_excel">CSV 转 Excel</string>
+    <string name="csv_excel_desc">根据 CSV 创建可编辑 XLSX</string>
+    <string name="csv_pdf">CSV 转 PDF</string>
+    <string name="csv_pdf_desc">将 CSV 行转换为 PDF</string>
+    <string name="powerpoint_pdf">PowerPoint 转 PDF</string>
+    <string name="powerpoint_pdf_desc">将幻灯片文本导出为 PDF</string>
+</resources>

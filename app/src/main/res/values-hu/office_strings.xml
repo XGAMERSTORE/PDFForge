@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word PDF-be</string>
+    <string name="word_pdf_desc">DOCX szöveg és egyszerű táblázatok PDF-be</string>
+    <string name="pdf_word">PDF Word-be</string>
+    <string name="pdf_word_desc">Szerkeszthető DOCX PDF-szövegből</string>
+    <string name="word_text">Word szöveggé</string>
+    <string name="word_text_desc">DOCX tartalom mentése TXT-be</string>
+    <string name="text_pdf">Szöveg PDF-be</string>
+    <string name="text_pdf_desc">TXT fájl átalakítása PDF-be</string>
+    <string name="excel_pdf">Excel PDF-be</string>
+    <string name="excel_pdf_desc">Első XLSX munkalap PDF-be</string>
+    <string name="excel_csv">Excel CSV-be</string>
+    <string name="excel_csv_desc">Első munkalap mentése CSV-be</string>
+    <string name="csv_excel">CSV Excelbe</string>
+    <string name="csv_excel_desc">Szerkeszthető XLSX létrehozása CSV-ből</string>
+    <string name="csv_pdf">CSV PDF-be</string>
+    <string name="csv_pdf_desc">CSV sorok átalakítása PDF-be</string>
+    <string name="powerpoint_pdf">PowerPoint PDF-be</string>
+    <string name="powerpoint_pdf_desc">Diák szövegének exportálása PDF-be</string>
+</resources>

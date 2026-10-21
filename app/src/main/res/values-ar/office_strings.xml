@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word إلى PDF</string>
+    <string name="word_pdf_desc">تحويل نصوص DOCX والجداول البسيطة</string>
+    <string name="pdf_word">PDF إلى Word</string>
+    <string name="pdf_word_desc">إنشاء DOCX قابل للتحرير من نص PDF</string>
+    <string name="word_text">Word إلى نص</string>
+    <string name="word_text_desc">تصدير DOCX كملف TXT</string>
+    <string name="text_pdf">نص إلى PDF</string>
+    <string name="text_pdf_desc">تحويل TXT إلى PDF</string>
+    <string name="excel_pdf">Excel إلى PDF</string>
+    <string name="excel_pdf_desc">تصدير أول ورقة XLSX إلى PDF</string>
+    <string name="excel_csv">Excel إلى CSV</string>
+    <string name="excel_csv_desc">تصدير أول ورقة إلى CSV</string>
+    <string name="csv_excel">CSV إلى Excel</string>
+    <string name="csv_excel_desc">إنشاء XLSX قابل للتحرير من CSV</string>
+    <string name="csv_pdf">CSV إلى PDF</string>
+    <string name="csv_pdf_desc">تحويل صفوف CSV إلى PDF</string>
+    <string name="powerpoint_pdf">PowerPoint إلى PDF</string>
+    <string name="powerpoint_pdf_desc">تصدير نص العرض إلى PDF</string>
+</resources>

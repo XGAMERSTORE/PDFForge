@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word 轉 PDF</string>
+    <string name="word_pdf_desc">轉換 DOCX 文字和簡單表格</string>
+    <string name="pdf_word">PDF 轉 Word</string>
+    <string name="pdf_word_desc">依 PDF 文字建立可編輯 DOCX</string>
+    <string name="word_text">Word 轉文字</string>
+    <string name="word_text_desc">將 DOCX 內容匯出為 TXT</string>
+    <string name="text_pdf">文字轉 PDF</string>
+    <string name="text_pdf_desc">將 TXT 檔案轉成 PDF</string>
+    <string name="excel_pdf">Excel 轉 PDF</string>
+    <string name="excel_pdf_desc">將第一張 XLSX 工作表匯出 PDF</string>
+    <string name="excel_csv">Excel 轉 CSV</string>
+    <string name="excel_csv_desc">匯出第一張工作表至 CSV</string>
+    <string name="csv_excel">CSV 轉 Excel</string>
+    <string name="csv_excel_desc">依 CSV 建立可編輯 XLSX</string>
+    <string name="csv_pdf">CSV 轉 PDF</string>
+    <string name="csv_pdf_desc">將 CSV 列轉換為 PDF</string>
+    <string name="powerpoint_pdf">PowerPoint 轉 PDF</string>
+    <string name="powerpoint_pdf_desc">將投影片文字匯出 PDF</string>
+</resources>

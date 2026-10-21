@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word în PDF</string>
+    <string name="word_pdf_desc">Convertește text și tabele simple DOCX</string>
+    <string name="pdf_word">PDF în Word</string>
+    <string name="pdf_word_desc">Creează DOCX editabil din textul PDF</string>
+    <string name="word_text">Word în text</string>
+    <string name="word_text_desc">Exportă conținutul DOCX în TXT</string>
+    <string name="text_pdf">Text în PDF</string>
+    <string name="text_pdf_desc">Transformă TXT în PDF</string>
+    <string name="excel_pdf">Excel în PDF</string>
+    <string name="excel_pdf_desc">Exportă prima foaie XLSX în PDF</string>
+    <string name="excel_csv">Excel în CSV</string>
+    <string name="excel_csv_desc">Exportă prima foaie în CSV</string>
+    <string name="csv_excel">CSV în Excel</string>
+    <string name="csv_excel_desc">Creează XLSX editabil din CSV</string>
+    <string name="csv_pdf">CSV în PDF</string>
+    <string name="csv_pdf_desc">Convertește rândurile CSV în PDF</string>
+    <string name="powerpoint_pdf">PowerPoint în PDF</string>
+    <string name="powerpoint_pdf_desc">Exportă textul prezentării în PDF</string>
+</resources>

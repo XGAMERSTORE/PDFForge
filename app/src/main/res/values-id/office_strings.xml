@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="word_pdf">Word ke PDF</string>
+    <string name="word_pdf_desc">Konversi teks dan tabel sederhana DOCX</string>
+    <string name="pdf_word">PDF ke Word</string>
+    <string name="pdf_word_desc">Buat DOCX yang dapat diedit dari teks PDF</string>
+    <string name="word_text">Word ke teks</string>
+    <string name="word_text_desc">Ekspor isi DOCX ke TXT</string>
+    <string name="text_pdf">Teks ke PDF</string>
+    <string name="text_pdf_desc">Ubah TXT menjadi PDF</string>
+    <string name="excel_pdf">Excel ke PDF</string>
+    <string name="excel_pdf_desc">Ekspor lembar XLSX pertama ke PDF</string>
+    <string name="excel_csv">Excel ke CSV</string>
+    <string name="excel_csv_desc">Ekspor lembar pertama ke CSV</string>
+    <string name="csv_excel">CSV ke Excel</string>
+    <string name="csv_excel_desc">Buat XLSX yang dapat diedit dari CSV</string>
+    <string name="csv_pdf">CSV ke PDF</string>
+    <string name="csv_pdf_desc">Ubah baris CSV menjadi PDF</string>
+    <string name="powerpoint_pdf">PowerPoint ke PDF</string>
+    <string name="powerpoint_pdf_desc">Ekspor teks presentasi ke PDF</string>
+</resources>
