@@ -73,9 +73,14 @@ public class MainActivity extends Activity {
         final String symbol;
         final int color;
         final PdfEngine.Action action;
+        final OfficeEngine.Action officeAction;
         Tool(int title, int subtitle, String symbol, int color, PdfEngine.Action action) {
             this.title = title; this.subtitle = subtitle; this.symbol = symbol;
-            this.color = color; this.action = action;
+            this.color = color; this.action = action;this.officeAction=null;
+        }
+        Tool(int title,int subtitle,String symbol,int color,OfficeEngine.Action officeAction,boolean isOffice){
+            this.title=title;this.subtitle=subtitle;this.symbol=symbol;this.color=color;
+            this.action=null;this.officeAction=officeAction;
         }
     }
 
@@ -92,6 +97,15 @@ public class MainActivity extends Activity {
         toolList.add(new Tool(R.string.pdf_to_image,R.string.pdf_to_image_desc,"▤",PALETTE[5],PdfEngine.Action.PDF_TO_IMAGE));
         toolList.add(new Tool(R.string.pdf_to_text,R.string.pdf_to_text_desc,"T",PALETTE[6],PdfEngine.Action.PDF_TO_TEXT));
         toolList.add(new Tool(R.string.sign,R.string.sign_desc,"✎",PALETTE[3],PdfEngine.Action.SIGN));
+        toolList.add(new Tool(R.string.word_pdf,R.string.word_pdf_desc,"W",PALETTE[0],OfficeEngine.Action.DOCX_PDF,true));
+        toolList.add(new Tool(R.string.pdf_word,R.string.pdf_word_desc,"W↗",PALETTE[4],OfficeEngine.Action.PDF_DOCX,true));
+        toolList.add(new Tool(R.string.word_text,R.string.word_text_desc,"W→T",PALETTE[6],OfficeEngine.Action.DOCX_TXT,true));
+        toolList.add(new Tool(R.string.text_pdf,R.string.text_pdf_desc,"T→",PALETTE[1],OfficeEngine.Action.TXT_PDF,true));
+        toolList.add(new Tool(R.string.excel_pdf,R.string.excel_pdf_desc,"X",PALETTE[1],OfficeEngine.Action.XLSX_PDF,true));
+        toolList.add(new Tool(R.string.excel_csv,R.string.excel_csv_desc,"X→",PALETTE[3],OfficeEngine.Action.XLSX_CSV,true));
+        toolList.add(new Tool(R.string.csv_excel,R.string.csv_excel_desc,"→X",PALETTE[0],OfficeEngine.Action.CSV_XLSX,true));
+        toolList.add(new Tool(R.string.csv_pdf,R.string.csv_pdf_desc,"CSV",PALETTE[5],OfficeEngine.Action.CSV_PDF,true));
+        toolList.add(new Tool(R.string.powerpoint_pdf,R.string.powerpoint_pdf_desc,"P",PALETTE[2],OfficeEngine.Action.PPTX_PDF,true));
         toolList.add(new Tool(R.string.preview,R.string.preview_desc,"↗",PALETTE[7],null));
         draw();
     }
@@ -335,7 +349,7 @@ public class MainActivity extends Activity {
             names.addView(label(R.string.offline,11,false,secondary()));
             TextView arrow=text("↗",20,true,accent()); arrow.setGravity(Gravity.CENTER);
             line.addView(arrow,lp(26,36));
-            line.setOnClickListener(v->openPdf(Uri.parse(uri)));
+            line.setOnClickListener(v->openRecent(Uri.parse(uri), name));
             c.addView(gap(9));
         }
     }
@@ -426,7 +440,24 @@ public class MainActivity extends Activity {
         pending=tool; selected.clear(); parameter="";
         Intent intent=new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType(tool.action==PdfEngine.Action.IMAGE_TO_PDF?"image/*":"application/pdf");
+        if(tool.officeAction!=null) {
+            String mime;
+            switch(tool.officeAction){
+                case DOCX_PDF: case DOCX_TXT:
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document";break;
+                case PDF_DOCX: mime="application/pdf";break;
+                case XLSX_PDF:case XLSX_CSV:
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";break;
+                case PPTX_PDF:
+                    mime="application/vnd.openxmlformats-officedocument.presentationml.presentation";break;
+                case TXT_PDF: mime="text/plain";break;
+                case CSV_PDF:case CSV_XLSX: mime="text/*";break;
+                default: mime="*/*";
+            }
+            intent.setType(mime);
+        } else {
+            intent.setType(tool.action==PdfEngine.Action.IMAGE_TO_PDF?"image/*":"application/pdf");
+        }
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE,
             tool.action==PdfEngine.Action.MERGE || tool.action==PdfEngine.Action.IMAGE_TO_PDF);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);
@@ -450,7 +481,7 @@ public class MainActivity extends Activity {
                 try {getContentResolver().takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION);}
                 catch(Exception ignored) {}
             }
-            if(pending.action==null) {Uri uri=selected.get(0);remember(uri);openPdf(uri);draw();return;}
+            if(pending.action==null && pending.officeAction==null) {Uri uri=selected.get(0);remember(uri);openPdf(uri);draw();return;}
             if(pending.action==PdfEngine.Action.MERGE && selected.size()<2) {
                 error(getString(R.string.file_too_many));return;
             }
@@ -563,6 +594,7 @@ public class MainActivity extends Activity {
     }
 
     private void createDestination() {
+        if(pending.officeAction!=null){ createOfficeDestination();return; }
         String extension="pdf", mime="application/pdf", name="PDFForge";
         if(pending.action==PdfEngine.Action.SPLIT || pending.action==PdfEngine.Action.PDF_TO_IMAGE) {
             extension="zip";mime="application/zip";
@@ -589,8 +621,32 @@ public class MainActivity extends Activity {
         catch(Exception e) {error(getString(R.string.action_failed)+"\n"+e.getMessage());}
     }
 
+    private void createOfficeDestination(){
+        String ext="pdf",mime="application/pdf",name="Converted";
+        switch(pending.officeAction){
+            case DOCX_PDF:name="Word_to_PDF";break;
+            case PDF_DOCX:name="PDF_to_Word";ext="docx";mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document";break;
+            case DOCX_TXT:name="Word_to_Text";ext="txt";mime="text/plain";break;
+            case TXT_PDF:name="Text_to_PDF";break;
+            case XLSX_PDF:name="Excel_to_PDF";break;
+            case XLSX_CSV:name="Excel_to_CSV";ext="csv";mime="text/csv";break;
+            case CSV_XLSX:name="CSV_to_Excel";ext="xlsx";mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";break;
+            case CSV_PDF:name="CSV_to_PDF";break;
+            case PPTX_PDF:name="PowerPoint_to_PDF";break;
+        }
+        String time=new SimpleDateFormat("yyyyMMdd_HHmmss",Locale.US).format(new java.util.Date());
+        Intent save=new Intent(Intent.ACTION_CREATE_DOCUMENT);
+        save.addCategory(Intent.CATEGORY_OPENABLE);
+        save.setType(mime);
+        save.putExtra(Intent.EXTRA_TITLE,"PDFForge_"+name+"_"+time+"."+ext);
+        save.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        try{startActivityForResult(save,CREATE);}
+        catch(Exception e){error(getString(R.string.action_failed)+"\n"+e.getMessage());}
+    }
+
     private void execute(Uri output) {
         PdfEngine.Action action=pending.action;
+        OfficeEngine.Action officeAction=pending.officeAction;
         List<Uri> sources=new ArrayList<>(selected);
         String param=parameter;
         LinearLayout holder=horizontal(); inset(holder,22,18,20,18);
@@ -601,7 +657,11 @@ public class MainActivity extends Activity {
         busy.show();
         worker.execute(()->{
             Throwable problem=null;
-            try { PdfEngine.execute(getApplicationContext(),action,sources,param,output); }
+            try {
+                if(officeAction!=null)
+                    OfficeEngine.execute(getApplicationContext(),officeAction,sources.get(0),output);
+                else PdfEngine.execute(getApplicationContext(),action,sources,param,output);
+            }
             catch(Throwable ex) {problem=ex;}
             Throwable failure=problem;
             runOnUiThread(()->{
@@ -634,6 +694,21 @@ public class MainActivity extends Activity {
         return last==null?"Document.pdf":last;
     }
 
+    private void openRecent(Uri uri,String fileName){
+        if(fileName.toLowerCase(Locale.ROOT).endsWith(".pdf")){openPdf(uri);return;}
+        Intent view=new Intent(Intent.ACTION_VIEW);
+        String mime="*/*";
+        String name=fileName.toLowerCase(Locale.ROOT);
+        if(name.endsWith(".docx"))mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+        else if(name.endsWith(".xlsx"))mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+        else if(name.endsWith(".txt"))mime="text/plain";
+        else if(name.endsWith(".csv"))mime="text/csv";
+        else if(name.endsWith(".zip"))mime="application/zip";
+        view.setDataAndType(uri,mime);
+        view.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        try{startActivity(view);}catch(Exception ex){shareDocument(uri);}
+    }
+
     private void openPdf(Uri uri) {
         Intent view=new Intent(Intent.ACTION_VIEW);
         view.setDataAndType(uri,"application/pdf");
@@ -645,8 +720,14 @@ public class MainActivity extends Activity {
 
     private void shareDocument(Uri uri) {
         Intent share=new Intent(Intent.ACTION_SEND);
-        String fileName=fileName(uri);
-        share.setType(fileName.endsWith(".zip")?"application/zip":fileName.endsWith(".txt")?"text/plain":"application/pdf");
+        String fileName=fileName(uri).toLowerCase(Locale.ROOT);
+        String type="application/pdf";
+        if(fileName.endsWith(".zip"))type="application/zip";
+        else if(fileName.endsWith(".txt"))type="text/plain";
+        else if(fileName.endsWith(".csv"))type="text/csv";
+        else if(fileName.endsWith(".docx"))type="application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+        else if(fileName.endsWith(".xlsx"))type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+        share.setType(type);
         share.putExtra(Intent.EXTRA_STREAM,uri);
         share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         try{startActivity(Intent.createChooser(share,getString(R.string.share)));}
