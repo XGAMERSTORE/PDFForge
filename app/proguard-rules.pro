@@ -11,3 +11,9 @@
 
 # Do not blanket-disable warnings or keep all classes. If R8 reports missing
 # dependencies in a release build, investigate the exact classes before adding rules.
+
+# PdfBox-Android's JPEG 2000 handler references optional Gemalto JP2 classes
+# that are not shipped by PdfBox-Android. Silence only these missing references.
+# JPEG 2000 encoding/decoding via those classes is not available in this build.
+-dontwarn com.gemalto.jp2.JP2Decoder
+-dontwarn com.gemalto.jp2.JP2Encoder
