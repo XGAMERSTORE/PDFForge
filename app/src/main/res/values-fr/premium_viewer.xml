@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Langue du téléphone</string>
+    <string name="premium_teaser">Modification PDF et conversions avancées</string>
+    <string name="premium_subtitle">Dessinez, ajoutez du texte et modifiez les pages PDF.</string>
+    <string name="premium_lifetime">Achat unique · Sans abonnement</string>
+    <string name="premium_benefits">Annoter et dessiner sur PDF;Pivoter et supprimer des pages;PDF vers Word;Excel et PowerPoint;Accès à vie</string>
+    <string name="premium_buy">Débloquer Premium</string>
+    <string name="premium_restore">Restaurer les achats</string>
+    <string name="premium_active">Premium actif</string>
+    <string name="premium_details">Voir Premium</string>
+    <string name="premium_locked">La modification de PDF nécessite PDFForge Premium.</string>
+    <string name="premium_not_available">Achat indisponible</string>
+    <string name="viewer_title">Lecteur PDF</string>
+    <string name="viewer_page">Page %1$d sur %2$d</string>
+    <string name="viewer_failed">Impossible d\'ouvrir le PDF.</string>
+    <string name="viewer_edit">Modifier le PDF</string>
+    <string name="viewer_readonly">Lecture seule · Gratuit</string>
+    <string name="viewer_premium">Modification · Premium</string>
+    <string name="viewer_pen">Dessiner</string>
+    <string name="viewer_highlight">Surligner</string>
+    <string name="viewer_text">Ajouter du texte</string>
+    <string name="viewer_undo">Annuler</string>
+    <string name="viewer_rotate">Pivoter</string>
+    <string name="viewer_delete">Supprimer la page</string>
+    <string name="viewer_save">Enregistrer une copie</string>
+    <string name="viewer_saved">PDF modifié enregistré</string>
+    <string name="viewer_text_hint">Saisissez le texte</string>
+    <string name="viewer_tap_text">Touchez le PDF pour placer le texte.</string>
+    <string name="viewer_unlock">Débloquer la modification</string>
+    <string name="viewer_delete_confirm">Supprimer cette page de la copie ?</string>
+    <string name="viewer_last_page">Un PDF doit avoir au moins une page.</string>
+    <string name="viewer_edit_help">L\'original ne sera pas modifié.</string>
+    <string name="viewer_save_error">Impossible d\'enregistrer le PDF.</string>
+</resources>

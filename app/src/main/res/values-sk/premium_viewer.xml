@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Podľa jazyka telefónu</string>
+    <string name="premium_teaser">Úpravy PDF a pokročilé prevody</string>
+    <string name="premium_subtitle">Upravujte PDF kreslením, textom a úpravou strán.</string>
+    <string name="premium_lifetime">Jednorazový nákup · Bez predplatného</string>
+    <string name="premium_benefits">Kreslenie a písanie do PDF;Otáčanie a mazanie strán;PDF do Wordu;Excel a PowerPoint;Trvalý prístup</string>
+    <string name="premium_buy">Odomknúť Premium</string>
+    <string name="premium_restore">Obnoviť nákupy</string>
+    <string name="premium_active">Premium je aktívne</string>
+    <string name="premium_details">Zobraziť Premium</string>
+    <string name="premium_locked">Úpravy PDF vyžadujú PDFForge Premium.</string>
+    <string name="premium_not_available">Nákup nie je dostupný</string>
+    <string name="viewer_title">Čítačka PDF</string>
+    <string name="viewer_page">Strana %1$d z %2$d</string>
+    <string name="viewer_failed">PDF sa nepodarilo otvoriť.</string>
+    <string name="viewer_edit">Upraviť PDF</string>
+    <string name="viewer_readonly">Iba čítanie · Zadarmo</string>
+    <string name="viewer_premium">Úpravy · Premium</string>
+    <string name="viewer_pen">Kresliť</string>
+    <string name="viewer_highlight">Zvýrazniť</string>
+    <string name="viewer_text">Pridať text</string>
+    <string name="viewer_undo">Späť</string>
+    <string name="viewer_rotate">Otočiť</string>
+    <string name="viewer_delete">Odstrániť stranu</string>
+    <string name="viewer_save">Uložiť kópiu</string>
+    <string name="viewer_saved">Upravené PDF uložené</string>
+    <string name="viewer_text_hint">Zadajte text</string>
+    <string name="viewer_tap_text">Ťuknite na PDF a umiestnite text.</string>
+    <string name="viewer_unlock">Odomknúť úpravy</string>
+    <string name="viewer_delete_confirm">Odstrániť túto stranu z kópie?</string>
+    <string name="viewer_last_page">PDF musí obsahovať aspoň jednu stranu.</string>
+    <string name="viewer_edit_help">Pôvodný dokument sa neprepíše.</string>
+    <string name="viewer_save_error">Nepodarilo sa uložiť PDF.</string>
+</resources>

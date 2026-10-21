@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Eszköz nyelvének használata</string>
+    <string name="premium_teaser">PDF-szerkesztés és speciális konvertálás</string>
+    <string name="premium_subtitle">Rajzoljon, adjon hozzá szöveget és szerkessze az oldalakat.</string>
+    <string name="premium_lifetime">Egyszeri vásárlás · Nincs előfizetés</string>
+    <string name="premium_benefits">Írás és rajzolás PDF-be;Oldalak forgatása és törlése;PDF Word-be;Excel és PowerPoint;Élethosszig tartó hozzáférés</string>
+    <string name="premium_buy">Premium feloldása</string>
+    <string name="premium_restore">Vásárlások visszaállítása</string>
+    <string name="premium_active">Premium aktív</string>
+    <string name="premium_details">Premium megtekintése</string>
+    <string name="premium_locked">A PDF szerkesztéséhez PDFForge Premium szükséges.</string>
+    <string name="premium_not_available">Vásárlás nem elérhető</string>
+    <string name="viewer_title">PDF-olvasó</string>
+    <string name="viewer_page">%1$d. oldal / %2$d</string>
+    <string name="viewer_failed">Nem sikerült megnyitni a PDF-et.</string>
+    <string name="viewer_edit">PDF szerkesztése</string>
+    <string name="viewer_readonly">Csak olvasható · Ingyenes</string>
+    <string name="viewer_premium">Szerkesztés · Premium</string>
+    <string name="viewer_pen">Rajzolás</string>
+    <string name="viewer_highlight">Kiemelés</string>
+    <string name="viewer_text">Szöveg hozzáadása</string>
+    <string name="viewer_undo">Visszavonás</string>
+    <string name="viewer_rotate">Forgatás</string>
+    <string name="viewer_delete">Oldal törlése</string>
+    <string name="viewer_save">Másolat mentése</string>
+    <string name="viewer_saved">Szerkesztett PDF mentve</string>
+    <string name="viewer_text_hint">Írja be a szöveget</string>
+    <string name="viewer_tap_text">Érintse meg a PDF-et a szöveg helyéhez.</string>
+    <string name="viewer_unlock">Szerkesztés feloldása</string>
+    <string name="viewer_delete_confirm">Törli ezt az oldalt a másolatból?</string>
+    <string name="viewer_last_page">A PDF-nek legalább egy oldalból kell állnia.</string>
+    <string name="viewer_edit_help">Az eredeti dokumentum nem változik.</string>
+    <string name="viewer_save_error">A PDF nem menthető.</string>
+</resources>

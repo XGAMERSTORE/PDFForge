@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Folosește limba dispozitivului</string>
+    <string name="premium_teaser">Editare PDF și conversii avansate</string>
+    <string name="premium_subtitle">Desenează, adaugă text și editează pagini PDF.</string>
+    <string name="premium_lifetime">Plată unică · Fără abonament</string>
+    <string name="premium_benefits">Scriere și desen în PDF;Rotire și eliminare pagini;PDF în Word;Excel și PowerPoint;Acces pe viață</string>
+    <string name="premium_buy">Deblochează Premium</string>
+    <string name="premium_restore">Restabilește achizițiile</string>
+    <string name="premium_active">Premium activ</string>
+    <string name="premium_details">Vezi Premium</string>
+    <string name="premium_locked">Editarea PDF necesită PDFForge Premium.</string>
+    <string name="premium_not_available">Achiziție indisponibilă</string>
+    <string name="viewer_title">Cititor PDF</string>
+    <string name="viewer_page">Pagina %1$d din %2$d</string>
+    <string name="viewer_failed">PDF-ul nu poate fi deschis.</string>
+    <string name="viewer_edit">Editează PDF</string>
+    <string name="viewer_readonly">Doar citire · Gratuit</string>
+    <string name="viewer_premium">Editare · Premium</string>
+    <string name="viewer_pen">Desenează</string>
+    <string name="viewer_highlight">Evidențiază</string>
+    <string name="viewer_text">Adaugă text</string>
+    <string name="viewer_undo">Anulează</string>
+    <string name="viewer_rotate">Rotește</string>
+    <string name="viewer_delete">Elimină pagina</string>
+    <string name="viewer_save">Salvează o copie</string>
+    <string name="viewer_saved">PDF editat salvat</string>
+    <string name="viewer_text_hint">Introdu textul</string>
+    <string name="viewer_tap_text">Atinge PDF pentru a plasa textul.</string>
+    <string name="viewer_unlock">Deblochează editarea</string>
+    <string name="viewer_delete_confirm">Elimini această pagină din copie?</string>
+    <string name="viewer_last_page">PDF-ul trebuie să aibă cel puțin o pagină.</string>
+    <string name="viewer_edit_help">Originalul nu va fi modificat.</string>
+    <string name="viewer_save_error">PDF-ul nu a putut fi salvat.</string>
+</resources>

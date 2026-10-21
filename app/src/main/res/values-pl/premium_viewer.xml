@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Język urządzenia</string>
+    <string name="premium_teaser">Edycja PDF i zaawansowane konwersje</string>
+    <string name="premium_subtitle">Rysuj, dodawaj tekst i edytuj strony PDF.</string>
+    <string name="premium_lifetime">Jednorazowy zakup · Bez subskrypcji</string>
+    <string name="premium_benefits">Rysowanie i pisanie w PDF;Obracanie i usuwanie stron;PDF na Word;Excel i PowerPoint;Dostęp na zawsze</string>
+    <string name="premium_buy">Odblokuj Premium</string>
+    <string name="premium_restore">Przywróć zakupy</string>
+    <string name="premium_active">Premium aktywne</string>
+    <string name="premium_details">Pokaż Premium</string>
+    <string name="premium_locked">Edycja PDF wymaga PDFForge Premium.</string>
+    <string name="premium_not_available">Zakup niedostępny</string>
+    <string name="viewer_title">Czytnik PDF</string>
+    <string name="viewer_page">Strona %1$d z %2$d</string>
+    <string name="viewer_failed">Nie można otworzyć PDF.</string>
+    <string name="viewer_edit">Edytuj PDF</string>
+    <string name="viewer_readonly">Tylko odczyt · Za darmo</string>
+    <string name="viewer_premium">Edycja · Premium</string>
+    <string name="viewer_pen">Rysuj</string>
+    <string name="viewer_highlight">Zaznacz</string>
+    <string name="viewer_text">Dodaj tekst</string>
+    <string name="viewer_undo">Cofnij</string>
+    <string name="viewer_rotate">Obróć</string>
+    <string name="viewer_delete">Usuń stronę</string>
+    <string name="viewer_save">Zapisz kopię</string>
+    <string name="viewer_saved">Zapisano edytowany PDF</string>
+    <string name="viewer_text_hint">Wpisz tekst</string>
+    <string name="viewer_tap_text">Dotknij PDF, aby umieścić tekst.</string>
+    <string name="viewer_unlock">Odblokuj edycję</string>
+    <string name="viewer_delete_confirm">Usunąć tę stronę z kopii?</string>
+    <string name="viewer_last_page">PDF musi zawierać przynajmniej jedną stronę.</string>
+    <string name="viewer_edit_help">Oryginał pozostanie bez zmian.</string>
+    <string name="viewer_save_error">Nie można zapisać PDF.</string>
+</resources>

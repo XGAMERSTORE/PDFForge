@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Använd enhetens språk</string>
+    <string name="premium_teaser">PDF-redigering och avancerad konvertering</string>
+    <string name="premium_subtitle">Rita, lägg till text och redigera PDF-sidor.</string>
+    <string name="premium_lifetime">Engångsköp · Ingen prenumeration</string>
+    <string name="premium_benefits">Skriv och rita i PDF;Rotera och ta bort sidor;PDF till Word;Excel och PowerPoint;Livstidsåtkomst</string>
+    <string name="premium_buy">Lås upp Premium</string>
+    <string name="premium_restore">Återställ köp</string>
+    <string name="premium_active">Premium aktivt</string>
+    <string name="premium_details">Visa Premium</string>
+    <string name="premium_locked">PDF-redigering kräver PDFForge Premium.</string>
+    <string name="premium_not_available">Köp ej tillgängligt</string>
+    <string name="viewer_title">PDF-läsare</string>
+    <string name="viewer_page">Sida %1$d av %2$d</string>
+    <string name="viewer_failed">Kunde inte öppna PDF.</string>
+    <string name="viewer_edit">Redigera PDF</string>
+    <string name="viewer_readonly">Endast läsning · Gratis</string>
+    <string name="viewer_premium">Redigering · Premium</string>
+    <string name="viewer_pen">Rita</string>
+    <string name="viewer_highlight">Markera</string>
+    <string name="viewer_text">Lägg till text</string>
+    <string name="viewer_undo">Ångra</string>
+    <string name="viewer_rotate">Rotera</string>
+    <string name="viewer_delete">Ta bort sida</string>
+    <string name="viewer_save">Spara kopia</string>
+    <string name="viewer_saved">Redigerad PDF sparad</string>
+    <string name="viewer_text_hint">Ange text</string>
+    <string name="viewer_tap_text">Tryck i PDF för att placera text.</string>
+    <string name="viewer_unlock">Lås upp redigering</string>
+    <string name="viewer_delete_confirm">Ta bort sidan från kopian?</string>
+    <string name="viewer_last_page">En PDF måste ha minst en sida.</string>
+    <string name="viewer_edit_help">Originalet ändras inte.</string>
+    <string name="viewer_save_error">Kunde inte spara PDF.</string>
+</resources>

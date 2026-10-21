@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Usa lingua del dispositivo</string>
+    <string name="premium_teaser">Modifica PDF e conversioni avanzate</string>
+    <string name="premium_subtitle">Disegna, aggiungi testo e modifica pagine PDF.</string>
+    <string name="premium_lifetime">Acquisto unico · Nessun abbonamento</string>
+    <string name="premium_benefits">Scrivi e disegna nei PDF;Ruota ed elimina pagine;PDF in Word;Excel e PowerPoint;Accesso a vita</string>
+    <string name="premium_buy">Sblocca Premium</string>
+    <string name="premium_restore">Ripristina acquisti</string>
+    <string name="premium_active">Premium attivo</string>
+    <string name="premium_details">Mostra Premium</string>
+    <string name="premium_locked">Per modificare un PDF serve PDFForge Premium.</string>
+    <string name="premium_not_available">Acquisto non disponibile</string>
+    <string name="viewer_title">Lettore PDF</string>
+    <string name="viewer_page">Pagina %1$d di %2$d</string>
+    <string name="viewer_failed">Impossibile aprire il PDF.</string>
+    <string name="viewer_edit">Modifica PDF</string>
+    <string name="viewer_readonly">Sola lettura · Gratis</string>
+    <string name="viewer_premium">Modifica · Premium</string>
+    <string name="viewer_pen">Disegna</string>
+    <string name="viewer_highlight">Evidenzia</string>
+    <string name="viewer_text">Aggiungi testo</string>
+    <string name="viewer_undo">Annulla</string>
+    <string name="viewer_rotate">Ruota</string>
+    <string name="viewer_delete">Elimina pagina</string>
+    <string name="viewer_save">Salva una copia</string>
+    <string name="viewer_saved">PDF modificato salvato</string>
+    <string name="viewer_text_hint">Inserisci il testo</string>
+    <string name="viewer_tap_text">Tocca il PDF per posizionare il testo.</string>
+    <string name="viewer_unlock">Sblocca modifica</string>
+    <string name="viewer_delete_confirm">Eliminare questa pagina dalla copia?</string>
+    <string name="viewer_last_page">Un PDF deve avere almeno una pagina.</string>
+    <string name="viewer_edit_help">Il documento originale resta intatto.</string>
+    <string name="viewer_save_error">Impossibile salvare il PDF.</string>
+</resources>

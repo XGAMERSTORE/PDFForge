@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Apparaattaal gebruiken</string>
+    <string name="premium_teaser">PDF bewerken en geavanceerd converteren</string>
+    <string name="premium_subtitle">Teken, voeg tekst toe en bewerk PDF-pagina\'s.</string>
+    <string name="premium_lifetime">Eenmalige aankoop · Geen abonnement</string>
+    <string name="premium_benefits">Schrijven en tekenen in PDF;Pagina\'s draaien en verwijderen;PDF naar Word;Excel en PowerPoint;Levenslange toegang</string>
+    <string name="premium_buy">Premium ontgrendelen</string>
+    <string name="premium_restore">Aankopen herstellen</string>
+    <string name="premium_active">Premium actief</string>
+    <string name="premium_details">Premium bekijken</string>
+    <string name="premium_locked">PDF bewerken vereist PDFForge Premium.</string>
+    <string name="premium_not_available">Aankoop niet beschikbaar</string>
+    <string name="viewer_title">PDF-lezer</string>
+    <string name="viewer_page">Pagina %1$d van %2$d</string>
+    <string name="viewer_failed">PDF kan niet worden geopend.</string>
+    <string name="viewer_edit">PDF bewerken</string>
+    <string name="viewer_readonly">Alleen lezen · Gratis</string>
+    <string name="viewer_premium">Bewerken · Premium</string>
+    <string name="viewer_pen">Tekenen</string>
+    <string name="viewer_highlight">Markeren</string>
+    <string name="viewer_text">Tekst toevoegen</string>
+    <string name="viewer_undo">Ongedaan maken</string>
+    <string name="viewer_rotate">Draaien</string>
+    <string name="viewer_delete">Pagina verwijderen</string>
+    <string name="viewer_save">Kopie opslaan</string>
+    <string name="viewer_saved">Bewerkte PDF opgeslagen</string>
+    <string name="viewer_text_hint">Voer tekst in</string>
+    <string name="viewer_tap_text">Tik op PDF om tekst te plaatsen.</string>
+    <string name="viewer_unlock">Bewerken ontgrendelen</string>
+    <string name="viewer_delete_confirm">Deze pagina uit de kopie verwijderen?</string>
+    <string name="viewer_last_page">Een PDF moet minstens één pagina hebben.</string>
+    <string name="viewer_edit_help">Het origineel blijft ongewijzigd.</string>
+    <string name="viewer_save_error">PDF kan niet worden opgeslagen.</string>
+</resources>

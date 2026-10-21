@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Gerätesprache verwenden</string>
+    <string name="premium_teaser">PDF-Bearbeitung und erweiterte Konvertierungen</string>
+    <string name="premium_subtitle">Zeichnen, Text einfügen und PDF-Seiten bearbeiten.</string>
+    <string name="premium_lifetime">Einmaliger Kauf · Kein Abo</string>
+    <string name="premium_benefits">PDFs beschriften und zeichnen;Seiten drehen und entfernen;PDF in Word;Excel und PowerPoint;Dauerhaft freigeschaltet</string>
+    <string name="premium_buy">Premium freischalten</string>
+    <string name="premium_restore">Käufe wiederherstellen</string>
+    <string name="premium_active">Premium ist aktiv</string>
+    <string name="premium_details">Premium anzeigen</string>
+    <string name="premium_locked">PDF-Bearbeitung erfordert PDFForge Premium.</string>
+    <string name="premium_not_available">Kauf nicht verfügbar</string>
+    <string name="viewer_title">PDF-Reader</string>
+    <string name="viewer_page">Seite %1$d von %2$d</string>
+    <string name="viewer_failed">PDF konnte nicht geöffnet werden.</string>
+    <string name="viewer_edit">PDF bearbeiten</string>
+    <string name="viewer_readonly">Nur lesen · Kostenlos</string>
+    <string name="viewer_premium">Bearbeiten · Premium</string>
+    <string name="viewer_pen">Zeichnen</string>
+    <string name="viewer_highlight">Markieren</string>
+    <string name="viewer_text">Text hinzufügen</string>
+    <string name="viewer_undo">Rückgängig</string>
+    <string name="viewer_rotate">Drehen</string>
+    <string name="viewer_delete">Seite entfernen</string>
+    <string name="viewer_save">Kopie speichern</string>
+    <string name="viewer_saved">Bearbeitete PDF gespeichert</string>
+    <string name="viewer_text_hint">Text eingeben</string>
+    <string name="viewer_tap_text">Zum Platzieren auf das PDF tippen.</string>
+    <string name="viewer_unlock">Bearbeitung freischalten</string>
+    <string name="viewer_delete_confirm">Diese Seite aus der Kopie entfernen?</string>
+    <string name="viewer_last_page">Ein PDF benötigt mindestens eine Seite.</string>
+    <string name="viewer_edit_help">Das Original bleibt unverändert.</string>
+    <string name="viewer_save_error">PDF konnte nicht gespeichert werden.</string>
+</resources>
