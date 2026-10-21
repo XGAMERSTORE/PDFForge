@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -66,6 +67,7 @@ public class MainActivity extends Activity {
     private int tab;
     private LinearLayout screen;
     private SharedPreferences preferences;
+    private BillingManager billing;
     private final ArrayList<Tool> toolList = new ArrayList<>();
 
     private static class Tool {
@@ -74,6 +76,13 @@ public class MainActivity extends Activity {
         final int color;
         final PdfEngine.Action action;
         final OfficeEngine.Action officeAction;
+        boolean isPremium() {
+            if(action==PdfEngine.Action.PDF_TO_TEXT || action==PdfEngine.Action.SIGN)return true;
+            if(officeAction==null)return false;
+            return officeAction!=OfficeEngine.Action.DOCX_PDF
+                && officeAction!=OfficeEngine.Action.TXT_PDF
+                && officeAction!=OfficeEngine.Action.CSV_PDF;
+        }
         Tool(int title, int subtitle, String symbol, int color, PdfEngine.Action action) {
             this.title = title; this.subtitle = subtitle; this.symbol = symbol;
             this.color = color; this.action = action;this.officeAction=null;
@@ -82,6 +91,10 @@ public class MainActivity extends Activity {
             this.title=title;this.subtitle=subtitle;this.symbol=symbol;this.color=color;
             this.action=null;this.officeAction=officeAction;
         }
+    }
+
+    @Override protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LanguageHelper.wrap(base));
     }
 
     @Override public void onCreate(Bundle state) {
@@ -107,7 +120,22 @@ public class MainActivity extends Activity {
         toolList.add(new Tool(R.string.csv_pdf,R.string.csv_pdf_desc,"CSV",PALETTE[5],OfficeEngine.Action.CSV_PDF,true));
         toolList.add(new Tool(R.string.powerpoint_pdf,R.string.powerpoint_pdf_desc,"P",PALETTE[2],OfficeEngine.Action.PPTX_PDF,true));
         toolList.add(new Tool(R.string.preview,R.string.preview_desc,"↗",PALETTE[7],null));
+        billing=new BillingManager(this,new BillingManager.Listener(){
+            @Override public void changed(){
+                if(!isFinishing()&&!isDestroyed()&&(tab==3||tab==4))draw();
+            }
+            @Override public void message(int resource){
+                if(!isFinishing()&&!isDestroyed())
+                    Toast.makeText(MainActivity.this,resource,Toast.LENGTH_LONG).show();
+            }
+        });
         draw();
+        billing.connect();
+    }
+
+    @Override public void onConfigurationChanged(Configuration config){
+        super.onConfigurationChanged(config);
+        if(!isFinishing())recreate();
     }
 
     private int bg() { return dark ? 0xFF0E1020 : 0xFFF6F7FC; }
@@ -164,6 +192,7 @@ public class MainActivity extends Activity {
             case 1: toolsPage(content); break;
             case 2: recentPage(content); break;
             case 3: settingsPage(content); break;
+            case 4: premiumPage(content); break;
             default: homePage(content);
         }
         bottomNavigation(root);
@@ -185,11 +214,13 @@ public class MainActivity extends Activity {
         TextView avatar = text("✦",23,true,accent());
         avatar.setGravity(Gravity.CENTER); avatar.setBackground(outlined(panel(),16,border()));
         bar.addView(avatar,lp(45,45));
-        avatar.setOnClickListener(v->{tab=3;draw();});
+        avatar.setOnClickListener(v->{tab=4;draw();});
     }
 
     private void homePage(LinearLayout c) {
         hero(c);
+        c.addView(gap(14));
+        if(!billing.isPremium()) premiumTeaser(c);
         c.addView(gap(24));
         header(c,R.string.popular_tools);
         c.addView(gap(13));
@@ -270,7 +301,8 @@ public class MainActivity extends Activity {
                 icon.setBackground(shape(dark?0xFF30334A:0xFFF0F0FF,14));
                 tile.addView(icon,lp(45,45));
                 tile.addView(gap(14));
-                TextView name=label(tool.title,14,true,ink());
+                TextView name=text(getString(tool.title)
+                    +(tool.isPremium()&&!billing.isPremium()?"  ✦":""),14,true,ink());
                 name.setMaxLines(2);
                 tile.addView(name,lp(-1,-2));
                 tile.addView(gap(5));
@@ -393,27 +425,113 @@ public class MainActivity extends Activity {
         language.setBackground(outlined(panel(),18,border())); c.addView(language,lp(-1,-2));
         language.addView(label(R.string.language,16,true,ink()));
         language.addView(gap(5));
-        language.addView(label(R.string.language_hint,13,false,secondary()));
-        language.setOnClickListener(v->{
-            if(Build.VERSION.SDK_INT>=33) {
-                try {
-                    Intent intent=new Intent("android.settings.APP_LOCALE_SETTINGS");
-                    intent.setData(Uri.parse("package:"+getPackageName()));
-                    startActivity(intent); return;
-                } catch(Exception ignored) {}
-            }
-            new AlertDialog.Builder(this).setTitle(R.string.language)
-                .setMessage(R.string.language_hint).setPositiveButton(R.string.done,null).show();
-        });
+        String currentLanguage=LanguageHelper.selected(this);
+        TextView languageCurrent=text(LanguageHelper.displayName(this,currentLanguage)+"  ▾",15,true,accent());
+        language.addView(languageCurrent,lp(-1,-2));
+        language.addView(gap(7));
+        language.addView(label(R.string.language_hint,12,false,secondary()));
+        language.setOnClickListener(v->chooseLanguage());
+        c.addView(gap(13));
+        premiumTeaser(c);
         c.addView(gap(13));
         LinearLayout about=vertical(); inset(about,18,18,18,18);
         about.setBackground(outlined(panel(),18,border())); c.addView(about,lp(-1,-2));
         about.addView(label(R.string.about,16,true,ink()));
         about.addView(gap(8)); about.addView(label(R.string.about_desc,13,false,secondary()));
-        about.addView(gap(8)); about.addView(text("Version 1.1.0 · Android 8+",12,false,secondary()));
+        about.addView(gap(8)); about.addView(text(getString(R.string.version_number,"1.2.0"),12,false,secondary()));
         c.addView(gap(18));
         TextView note=label(R.string.disclaimer,12,false,secondary());
         note.setLineSpacing(dp(3),1f); c.addView(note);
+    }
+
+    private void chooseLanguage(){
+        String[] codes=LanguageHelper.TAGS;
+        String[] names=new String[codes.length];
+        String current=LanguageHelper.selected(this);
+        int active=0;
+        for(int i=0;i<codes.length;i++){
+            names[i]=LanguageHelper.displayName(this,codes[i]);
+            if(codes[i].equalsIgnoreCase(current))active=i;
+        }
+        new AlertDialog.Builder(this).setTitle(R.string.language)
+            .setSingleChoiceItems(names,active,(dialog,choice)->{
+                String code=codes[choice];
+                dialog.dismiss();
+                LanguageHelper.select(this,code);
+                recreate();
+            })
+            .setNegativeButton(R.string.cancel,null).show();
+    }
+
+    private void premiumTeaser(LinearLayout parent){
+        LinearLayout row=horizontal();
+        inset(row,18,17,16,17);
+        row.setBackground(outlined(panel(),19,border()));
+        parent.addView(row,lp(-1,-2));
+        TextView symbol=text("✦",23,true,0xFF8758F3);
+        symbol.setGravity(Gravity.CENTER);
+        symbol.setBackground(shape(dark?0xFF343054:0xFFF0EAFF,14));
+        row.addView(symbol,lp(48,48));
+        LinearLayout titles=vertical();inset(titles,13,0,0,0);
+        row.addView(titles,new LinearLayout.LayoutParams(0,-2,1f));
+        titles.addView(label(billing.isPremium()?R.string.premium_active:R.string.premium_title,16,true,ink()));
+        titles.addView(gap(4));
+        titles.addView(label(billing.isPremium()?R.string.premium_active_desc:R.string.premium_teaser,12,false,secondary()));
+        TextView arrow=text("→",24,true,accent());
+        arrow.setGravity(Gravity.CENTER);row.addView(arrow,lp(28,42));
+        row.setOnClickListener(v->{tab=4;draw();});
+    }
+
+    private void premiumPage(LinearLayout c){
+        c.addView(label(R.string.premium_title,28,true,ink()));
+        c.addView(gap(12));
+        LinearLayout hero=vertical();inset(hero,24,24,24,23);
+        GradientDrawable gradient=new GradientDrawable(GradientDrawable.Orientation.TL_BR,
+                new int[]{0xFF27214D,0xFF6954D8,0xFF886DFF});
+        gradient.setCornerRadius(dp(23));hero.setBackground(gradient);
+        c.addView(hero,lp(-1,-2));
+        hero.addView(text("✦ PDFForge PRO",25,true,Color.WHITE));
+        hero.addView(gap(11));
+        hero.addView(label(R.string.premium_subtitle,15,false,Color.WHITE));
+        hero.addView(gap(12));
+        hero.addView(label(R.string.premium_lifetime,13,true,0xFFEAE4FF));
+        c.addView(gap(19));
+        String[] benefits=getString(R.string.premium_benefits).split("\\|");
+        for(String benefit:benefits){
+            LinearLayout item=horizontal();inset(item,14,12,14,12);
+            item.setBackground(outlined(panel(),13,border()));
+            c.addView(item,lp(-1,-2));
+            TextView tick=text("✓",18,true,0xFF119E83);item.addView(tick,lp(27,26));
+            TextView value=text(benefit,14,true,ink());
+            item.addView(value,new LinearLayout.LayoutParams(0,-2,1));
+            c.addView(gap(7));
+        }
+        c.addView(gap(14));
+        if(billing.isPremium()){
+            TextView active=label(R.string.premium_active,17,true,0xFF10A980);
+            active.setGravity(Gravity.CENTER);
+            active.setBackground(outlined(panel(),15,border()));
+            c.addView(active,lp(-1,56));
+        }else{
+            String price=billing.price();
+            String buyText=price==null?getString(R.string.premium_not_available)
+                    :getString(R.string.premium_buy)+" · "+price;
+            TextView buy=text(buyText,16,true,Color.WHITE);
+            buy.setGravity(Gravity.CENTER);
+            buy.setBackground(shape(0xFF6954E8,15));
+            buy.setAlpha(billing.canBuy()?1f:0.55f);
+            c.addView(buy,lp(-1,54));
+            buy.setOnClickListener(v->billing.purchase());
+        }
+        c.addView(gap(11));
+        TextView restore=label(R.string.premium_restore,14,true,accent());
+        restore.setGravity(Gravity.CENTER);
+        c.addView(restore,lp(-1,45));
+        restore.setOnClickListener(v->billing.restore());
+        c.addView(gap(12));
+        TextView detail=label(R.string.premium_play_notice,12,false,secondary());
+        detail.setLineSpacing(dp(3),1f);
+        c.addView(detail);
     }
 
     private void bottomNavigation(LinearLayout root) {
@@ -437,6 +555,15 @@ public class MainActivity extends Activity {
     }
 
     private void chooseTool(Tool tool) {
+        if(tool.isPremium() && !billing.isPremium()){
+            new AlertDialog.Builder(this)
+                .setTitle(R.string.premium_title)
+                .setMessage(R.string.premium_locked)
+                .setNegativeButton(R.string.cancel,null)
+                .setPositiveButton(R.string.premium_details,(dialog,which)->{tab=4;draw();})
+                .show();
+            return;
+        }
         pending=tool; selected.clear(); parameter="";
         Intent intent=new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
@@ -645,6 +772,11 @@ public class MainActivity extends Activity {
     }
 
     private void execute(Uri output) {
+        if(pending.isPremium()&&!billing.isPremium()){
+            tab=4;draw();
+            Toast.makeText(this,R.string.premium_locked,Toast.LENGTH_LONG).show();
+            return;
+        }
         PdfEngine.Action action=pending.action;
         OfficeEngine.Action officeAction=pending.officeAction;
         List<Uri> sources=new ArrayList<>(selected);
@@ -714,7 +846,7 @@ public class MainActivity extends Activity {
         view.setDataAndType(uri,"application/pdf");
         view.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         try {startActivity(view);} catch(ActivityNotFoundException e) {
-            error("No PDF viewer installed. You can still edit PDF files in PDFForge.");
+            error(getString(R.string.no_pdf_reader));
         } catch(Exception e) {error(getString(R.string.file_unsupported));}
     }
 
@@ -739,7 +871,13 @@ public class MainActivity extends Activity {
             .setMessage(message).setPositiveButton(R.string.done,null).show();
     }
 
+    @Override protected void onResume(){
+        super.onResume();
+        if(billing!=null)billing.refresh();
+    }
+
     @Override protected void onDestroy() {
+        if(billing!=null)billing.close();
         worker.shutdownNow();
         super.onDestroy();
     }
