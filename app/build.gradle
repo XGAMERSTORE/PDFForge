@@ -8,25 +8,17 @@ android {
         applicationId 'com.xgamerstore.pdfforge'
         minSdk 26
         targetSdk 35
-        versionCode 5
-        versionName '1.3.1'
+        versionCode 4
+        versionName '1.3.0'
         resourceConfigurations += ['en','cs','sk','de','fr','es','it','pt','pl','nl','sv','ro','hu','tr','uk','ru','ar','hi','id','vi','ja','ko','zh']
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    buildFeatures {
-        buildConfig = true
-    }
     buildTypes {
-        debug {
-            applicationIdSuffix '.debug'
-            versionNameSuffix '-test'
-            buildConfigField 'boolean', 'INTERNAL_TEST_LICENSE', 'true'
-        }
+        debug { applicationIdSuffix '.debug'; versionNameSuffix '-debug' }
         release {
-            buildConfigField 'boolean', 'INTERNAL_TEST_LICENSE', 'false'
             minifyEnabled false
             // Release bundle is UNSIGNED unless a private upload key is configured.
             // Never commit Play signing keys into version control.
