@@ -2,7 +2,7 @@
 
 Native Android app built in Java. Modern dark/light dashboard, English-first localization, offline document processing.
 
-## Features (PDFForge 1.3.0)
+## Features (PDFForge 1.0.0)
 - Merge PDFs while retaining original text and vector content where possible
 - Split a PDF into separate pages, bundled into ZIP
 - Extract selected page ranges and rotate any pages
@@ -16,7 +16,7 @@ Native Android app built in Java. Modern dark/light dashboard, English-first loc
 - PowerPoint (.pptx) → PDF
 
 ### Fidelity and supported formats
-Office files are handled **entirely offline**. Version 1.3 offers practical *content conversions*, not pixel-perfect Microsoft Office reproduction:
+Office files are handled **entirely offline**. Version 1.0 offers practical *content conversions*, not pixel-perfect Microsoft Office reproduction:
 - DOCX → PDF converts paragraphs, headings and simple tables. Exact fonts, images, complex tables, headers, footers and layout are not guaranteed.
 - PDF → DOCX makes an editable Word document from **extractable text**. It does not reproduce the original layout and does not OCR scanned pages.
 - XLSX conversions use **the first worksheet** and the stored cell values; formulas are not recalculated.
@@ -45,6 +45,17 @@ PDFForge Premium is implemented using a Google Play **one-time, non-consumable**
 5. For production anti-fraud, add backend Google Play purchase token verification. The current on-device entitlement check and offline cache are a starter implementation, not a hardened backend.
 
 PDF editing is intentionally a **non-destructive overlay** editor: you can add annotations and text, rotate or delete pages, then export a new file. It does **not** change or remove existing text objects or securely redact document content. Signed PDFs may lose or invalidate their original signatures when edited.
+
+## Play Store, target API, build-size reduction
+
+- `compileSdk 36`, `targetSdk 36`, Android Gradle Plugin 8.11.2, Gradle 8.13, JDK 17.
+- Requested version: `versionCode 1` / `versionName 1.0.0`.
+- **Google Play warning:** if a previous AAB with version code 4 was uploaded to the same app, code 1 may be rejected; an unused higher version code is required. Do not silently increase the requested version code.
+- Release has R8 code shrinking, optimization, obfuscation and Android resource shrinking enabled.
+- R8 uses the Android optimized default ProGuard rules plus project-specific safety rules.
+- Keep debug builds unminified for Premium development testing. Release builds MUST NOT unlock Premium without a Play entitlement.
+- Production AAB is unsigned until a private release upload key is provided. Google Play updates must use the correct signing key.
+- Targeting Android 16 / API 36 can alter edge-to-edge behavior on Android 15+ devices. Test the built-in PDF reader, editor and navigation UI on a real device.
 
 ## Build
 Use Android Studio (AGP 8.8.2, JDK 17), or GitHub Actions `Android APK + AAB`, which produces a **debug APK** and an **unsigned release AAB**.
