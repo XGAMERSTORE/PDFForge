@@ -1,0 +1,40 @@
+name: Android APK + AAB
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - name: Install Android platform
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+      - name: Assemble APK and AAB
+        run: gradle --no-daemon --stacktrace :app:assembleDebug :app:bundleRelease
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDFForge-debug-APK
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+      - name: Upload AAB (unsigned)
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDFForge-release-AAB-unsigned
+          path: app/build/outputs/bundle/release/*.aab
+          if-no-files-found: error
