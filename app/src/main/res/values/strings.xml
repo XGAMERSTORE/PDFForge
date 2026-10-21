@@ -35,7 +35,7 @@
     <string name="sign_empty">Draw a signature first</string>
     <string name="clear_signature">Clear</string>
     <string name="preview">Open PDF</string>
-    <string name="preview_desc">View a PDF with your installed reader</string>
+    <string name="preview_desc">Read and edit PDFs directly in PDFForge</string>
     <string name="privacy_header">Privacy first</string>
     <string name="privacy_desc">Files stay on your device. All processing runs offline.</string>
     <string name="appearance">Appearance</string>

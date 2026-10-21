@@ -47,7 +47,7 @@
     <string name="image_to_pdf_desc">Vytvořit PDF z fotografií</string>
     <string name="pdf_to_image_desc">Exportovat stránky jako PNG v ZIP</string>
     <string name="pdf_to_text_desc">Exportovat text do souboru TXT</string>
-    <string name="preview_desc">Zobrazit PDF v nainstalované čtečce</string>
+    <string name="preview_desc">Číst a upravovat PDF přímo v PDFForge</string>
     <string name="no_recent">Zatím žádné dokumenty</string>
     <string name="no_recent_hint">Uložené soubory najdete zde pro rychlý přístup.</string>
     <string name="language_hint">Používá jazyk telefonu; pokud překlad chybí, zobrazí se angličtina.</string>

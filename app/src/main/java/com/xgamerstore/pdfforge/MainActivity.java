@@ -129,8 +129,17 @@ public class MainActivity extends Activity {
                     Toast.makeText(MainActivity.this,resource,Toast.LENGTH_LONG).show();
             }
         });
+        if(getIntent()!=null && getIntent().getBooleanExtra("open_premium",false))tab=4;
         draw();
         billing.connect();
+    }
+
+    @Override protected void onNewIntent(Intent intent){
+        super.onNewIntent(intent);
+        setIntent(intent);
+        if(intent!=null && intent.getBooleanExtra("open_premium",false)){
+            tab=4;draw();
+        }
     }
 
     @Override public void onConfigurationChanged(Configuration config){
@@ -496,7 +505,7 @@ public class MainActivity extends Activity {
         hero.addView(gap(12));
         hero.addView(label(R.string.premium_lifetime,13,true,0xFFEAE4FF));
         c.addView(gap(19));
-        String[] benefits=getString(R.string.premium_benefits).split("\\|");
+        String[] benefits=getString(R.string.premium_benefits).split(";");
         for(String benefit:benefits){
             LinearLayout item=horizontal();inset(item,14,12,14,12);
             item.setBackground(outlined(panel(),13,border()));
@@ -608,7 +617,13 @@ public class MainActivity extends Activity {
                 try {getContentResolver().takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION);}
                 catch(Exception ignored) {}
             }
-            if(pending.action==null && pending.officeAction==null) {Uri uri=selected.get(0);remember(uri);openPdf(uri);draw();return;}
+            if(pending.action==null && pending.officeAction==null) {
+                Uri uri=selected.get(0);
+                remember(uri);
+                openPdf(uri);
+                draw();
+                return;
+            }
             if(pending.action==PdfEngine.Action.MERGE && selected.size()<2) {
                 error(getString(R.string.file_too_many));return;
             }
@@ -842,12 +857,12 @@ public class MainActivity extends Activity {
     }
 
     private void openPdf(Uri uri) {
-        Intent view=new Intent(Intent.ACTION_VIEW);
-        view.setDataAndType(uri,"application/pdf");
+        Intent view=new Intent(this,PdfEditorActivity.class);
+        view.setData(uri);
         view.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        try {startActivity(view);} catch(ActivityNotFoundException e) {
-            error(getString(R.string.no_pdf_reader));
-        } catch(Exception e) {error(getString(R.string.file_unsupported));}
+        try{startActivity(view);}catch(Exception ex){
+            error(getString(R.string.file_unsupported));
+        }
     }
 
     private void shareDocument(Uri uri) {
