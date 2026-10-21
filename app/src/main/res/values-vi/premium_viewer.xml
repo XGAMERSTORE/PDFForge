@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Dùng ngôn ngữ thiết bị</string>
+    <string name="premium_teaser">Chỉnh sửa PDF và chuyển đổi nâng cao</string>
+    <string name="premium_subtitle">Vẽ, thêm chữ và chỉnh sửa trang PDF.</string>
+    <string name="premium_lifetime">Mua một lần · Không đăng ký</string>
+    <string name="premium_benefits">Viết và vẽ trên PDF;Xoay và xóa trang;PDF sang Word;Excel và PowerPoint;Truy cập trọn đời</string>
+    <string name="premium_buy">Mở khóa Premium</string>
+    <string name="premium_restore">Khôi phục giao dịch</string>
+    <string name="premium_active">Premium đang hoạt động</string>
+    <string name="premium_details">Xem Premium</string>
+    <string name="premium_locked">Chỉnh sửa PDF cần PDFForge Premium.</string>
+    <string name="premium_not_available">Chưa thể mua</string>
+    <string name="viewer_title">Trình đọc PDF</string>
+    <string name="viewer_page">Trang %1$d / %2$d</string>
+    <string name="viewer_failed">Không thể mở PDF.</string>
+    <string name="viewer_edit">Chỉnh sửa PDF</string>
+    <string name="viewer_readonly">Chỉ đọc · Miễn phí</string>
+    <string name="viewer_premium">Chỉnh sửa · Premium</string>
+    <string name="viewer_pen">Vẽ</string>
+    <string name="viewer_highlight">Đánh dấu</string>
+    <string name="viewer_text">Thêm văn bản</string>
+    <string name="viewer_undo">Hoàn tác</string>
+    <string name="viewer_rotate">Xoay</string>
+    <string name="viewer_delete">Xóa trang</string>
+    <string name="viewer_save">Lưu bản sao</string>
+    <string name="viewer_saved">Đã lưu PDF chỉnh sửa</string>
+    <string name="viewer_text_hint">Nhập văn bản</string>
+    <string name="viewer_tap_text">Chạm vào PDF để đặt chữ.</string>
+    <string name="viewer_unlock">Mở khóa chỉnh sửa</string>
+    <string name="viewer_delete_confirm">Xóa trang này khỏi bản sao?</string>
+    <string name="viewer_last_page">PDF phải có ít nhất một trang.</string>
+    <string name="viewer_edit_help">Tệp gốc không thay đổi.</string>
+    <string name="viewer_save_error">Không thể lưu PDF.</string>
+</resources>

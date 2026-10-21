@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Gunakan bahasa perangkat</string>
+    <string name="premium_teaser">Edit PDF dan konversi lanjutan</string>
+    <string name="premium_subtitle">Gambar, tambahkan teks, dan edit halaman PDF.</string>
+    <string name="premium_lifetime">Pembelian sekali · Tanpa langganan</string>
+    <string name="premium_benefits">Menulis dan menggambar di PDF;Putar dan hapus halaman;PDF ke Word;Excel dan PowerPoint;Akses seumur hidup</string>
+    <string name="premium_buy">Buka Premium</string>
+    <string name="premium_restore">Pulihkan pembelian</string>
+    <string name="premium_active">Premium aktif</string>
+    <string name="premium_details">Lihat Premium</string>
+    <string name="premium_locked">Pengeditan PDF memerlukan PDFForge Premium.</string>
+    <string name="premium_not_available">Pembelian tidak tersedia</string>
+    <string name="viewer_title">Pembaca PDF</string>
+    <string name="viewer_page">Halaman %1$d dari %2$d</string>
+    <string name="viewer_failed">Gagal membuka PDF.</string>
+    <string name="viewer_edit">Edit PDF</string>
+    <string name="viewer_readonly">Hanya baca · Gratis</string>
+    <string name="viewer_premium">Edit · Premium</string>
+    <string name="viewer_pen">Gambar</string>
+    <string name="viewer_highlight">Sorot</string>
+    <string name="viewer_text">Tambah teks</string>
+    <string name="viewer_undo">Urungkan</string>
+    <string name="viewer_rotate">Putar</string>
+    <string name="viewer_delete">Hapus halaman</string>
+    <string name="viewer_save">Simpan salinan</string>
+    <string name="viewer_saved">PDF yang diedit tersimpan</string>
+    <string name="viewer_text_hint">Masukkan teks</string>
+    <string name="viewer_tap_text">Ketuk PDF untuk menempatkan teks.</string>
+    <string name="viewer_unlock">Buka fitur edit</string>
+    <string name="viewer_delete_confirm">Hapus halaman ini dari salinan?</string>
+    <string name="viewer_last_page">PDF harus memiliki setidaknya satu halaman.</string>
+    <string name="viewer_edit_help">Dokumen asli tidak berubah.</string>
+    <string name="viewer_save_error">Gagal menyimpan PDF.</string>
+</resources>

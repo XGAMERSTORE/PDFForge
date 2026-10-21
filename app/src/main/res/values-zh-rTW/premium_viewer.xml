@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">使用裝置語言</string>
+    <string name="premium_teaser">PDF 編輯與進階轉換</string>
+    <string name="premium_subtitle">在 PDF 上繪圖、加入文字及編輯頁面。</string>
+    <string name="premium_lifetime">一次購買 · 無須訂閱</string>
+    <string name="premium_benefits">PDF 書寫與繪圖;旋轉及刪除頁面;PDF 轉 Word;Excel 與 PowerPoint;終身使用</string>
+    <string name="premium_buy">解鎖 Premium</string>
+    <string name="premium_restore">還原購買</string>
+    <string name="premium_active">Premium 已啟用</string>
+    <string name="premium_details">查看 Premium</string>
+    <string name="premium_locked">編輯 PDF 需要 PDFForge Premium。</string>
+    <string name="premium_not_available">目前無法購買</string>
+    <string name="viewer_title">PDF 閱讀器</string>
+    <string name="viewer_page">第 %1$d 頁，共 %2$d 頁</string>
+    <string name="viewer_failed">無法開啟 PDF。</string>
+    <string name="viewer_edit">編輯 PDF</string>
+    <string name="viewer_readonly">唯讀 · 免費</string>
+    <string name="viewer_premium">編輯 · Premium</string>
+    <string name="viewer_pen">繪圖</string>
+    <string name="viewer_highlight">標示</string>
+    <string name="viewer_text">加入文字</string>
+    <string name="viewer_undo">復原</string>
+    <string name="viewer_rotate">旋轉</string>
+    <string name="viewer_delete">刪除頁面</string>
+    <string name="viewer_save">儲存副本</string>
+    <string name="viewer_saved">已儲存編輯後的 PDF</string>
+    <string name="viewer_text_hint">輸入文字</string>
+    <string name="viewer_tap_text">點選 PDF 放置文字。</string>
+    <string name="viewer_unlock">解鎖編輯</string>
+    <string name="viewer_delete_confirm">從副本中刪除此頁？</string>
+    <string name="viewer_last_page">PDF 至少需要一頁。</string>
+    <string name="viewer_edit_help">原始文件不會更改。</string>
+    <string name="viewer_save_error">無法儲存 PDF。</string>
+</resources>

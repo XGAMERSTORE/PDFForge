@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Cihaz dilini kullan</string>
+    <string name="premium_teaser">PDF düzenleme ve gelişmiş dönüşümler</string>
+    <string name="premium_subtitle">PDF üzerine çizim yapın, metin ekleyin ve sayfaları düzenleyin.</string>
+    <string name="premium_lifetime">Tek seferlik satın alma · Abonelik yok</string>
+    <string name="premium_benefits">PDF üzerine yazın ve çizin;Sayfaları döndürün ve silin;PDF\'den Word\'e;Excel ve PowerPoint;Ömür boyu erişim</string>
+    <string name="premium_buy">Premium\'u aç</string>
+    <string name="premium_restore">Satın alımları geri yükle</string>
+    <string name="premium_active">Premium etkin</string>
+    <string name="premium_details">Premium\'u göster</string>
+    <string name="premium_locked">PDF düzenleme için PDFForge Premium gerekir.</string>
+    <string name="premium_not_available">Satın alma kullanılamıyor</string>
+    <string name="viewer_title">PDF okuyucu</string>
+    <string name="viewer_page">Sayfa %1$d / %2$d</string>
+    <string name="viewer_failed">PDF açılamadı.</string>
+    <string name="viewer_edit">PDF düzenle</string>
+    <string name="viewer_readonly">Salt okunur · Ücretsiz</string>
+    <string name="viewer_premium">Düzenleme · Premium</string>
+    <string name="viewer_pen">Çiz</string>
+    <string name="viewer_highlight">Vurgula</string>
+    <string name="viewer_text">Metin ekle</string>
+    <string name="viewer_undo">Geri al</string>
+    <string name="viewer_rotate">Döndür</string>
+    <string name="viewer_delete">Sayfayı sil</string>
+    <string name="viewer_save">Kopyayı kaydet</string>
+    <string name="viewer_saved">Düzenlenmiş PDF kaydedildi</string>
+    <string name="viewer_text_hint">Metin girin</string>
+    <string name="viewer_tap_text">Metni yerleştirmek için PDF\'ye dokunun.</string>
+    <string name="viewer_unlock">Düzenlemeyi aç</string>
+    <string name="viewer_delete_confirm">Bu sayfa kopyadan kaldırılsın mı?</string>
+    <string name="viewer_last_page">PDF en az bir sayfa içermelidir.</string>
+    <string name="viewer_edit_help">Özgün belge değişmez.</string>
+    <string name="viewer_save_error">PDF kaydedilemedi.</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">端末の言語を使用</string>
+    <string name="premium_teaser">PDF編集と高度な変換</string>
+    <string name="premium_subtitle">PDFに手書き、文字追加、ページ編集ができます。</string>
+    <string name="premium_lifetime">買い切り · サブスクなし</string>
+    <string name="premium_benefits">PDFに書き込みと描画;ページの回転と削除;PDFからWord;ExcelとPowerPoint;永久に利用可能</string>
+    <string name="premium_buy">Premiumを解除</string>
+    <string name="premium_restore">購入を復元</string>
+    <string name="premium_active">Premiumが有効です</string>
+    <string name="premium_details">Premiumを見る</string>
+    <string name="premium_locked">PDF編集にはPDFForge Premiumが必要です。</string>
+    <string name="premium_not_available">購入できません</string>
+    <string name="viewer_title">PDFリーダー</string>
+    <string name="viewer_page">%1$d / %2$d ページ</string>
+    <string name="viewer_failed">PDFを開けませんでした。</string>
+    <string name="viewer_edit">PDFを編集</string>
+    <string name="viewer_readonly">閲覧のみ · 無料</string>
+    <string name="viewer_premium">編集 · Premium</string>
+    <string name="viewer_pen">描画</string>
+    <string name="viewer_highlight">ハイライト</string>
+    <string name="viewer_text">文字を追加</string>
+    <string name="viewer_undo">元に戻す</string>
+    <string name="viewer_rotate">回転</string>
+    <string name="viewer_delete">ページを削除</string>
+    <string name="viewer_save">コピーを保存</string>
+    <string name="viewer_saved">編集済みPDFを保存しました</string>
+    <string name="viewer_text_hint">文字を入力</string>
+    <string name="viewer_tap_text">PDFをタップして文字を配置します。</string>
+    <string name="viewer_unlock">編集を解除</string>
+    <string name="viewer_delete_confirm">コピーからこのページを削除しますか？</string>
+    <string name="viewer_last_page">PDFには最低1ページ必要です。</string>
+    <string name="viewer_edit_help">元のファイルは変更されません。</string>
+    <string name="viewer_save_error">PDFを保存できませんでした。</string>
+</resources>

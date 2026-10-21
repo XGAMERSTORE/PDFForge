@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_system">Язык устройства</string>
+    <string name="premium_teaser">Редактирование PDF и расширенные преобразования</string>
+    <string name="premium_subtitle">Рисуйте, добавляйте текст и меняйте страницы PDF.</string>
+    <string name="premium_lifetime">Разовая покупка · Без подписки</string>
+    <string name="premium_benefits">Рисование и подписи в PDF;Поворот и удаление страниц;PDF в Word;Excel и PowerPoint;Доступ навсегда</string>
+    <string name="premium_buy">Открыть Premium</string>
+    <string name="premium_restore">Восстановить покупки</string>
+    <string name="premium_active">Premium активен</string>
+    <string name="premium_details">Посмотреть Premium</string>
+    <string name="premium_locked">Для редактирования PDF нужен PDFForge Premium.</string>
+    <string name="premium_not_available">Покупка недоступна</string>
+    <string name="viewer_title">Просмотр PDF</string>
+    <string name="viewer_page">Страница %1$d из %2$d</string>
+    <string name="viewer_failed">Не удалось открыть PDF.</string>
+    <string name="viewer_edit">Редактировать PDF</string>
+    <string name="viewer_readonly">Только чтение · Бесплатно</string>
+    <string name="viewer_premium">Правка · Premium</string>
+    <string name="viewer_pen">Рисовать</string>
+    <string name="viewer_highlight">Выделить</string>
+    <string name="viewer_text">Добавить текст</string>
+    <string name="viewer_undo">Отменить</string>
+    <string name="viewer_rotate">Повернуть</string>
+    <string name="viewer_delete">Удалить страницу</string>
+    <string name="viewer_save">Сохранить копию</string>
+    <string name="viewer_saved">Изменённый PDF сохранён</string>
+    <string name="viewer_text_hint">Введите текст</string>
+    <string name="viewer_tap_text">Нажмите на PDF для размещения текста.</string>
+    <string name="viewer_unlock">Открыть редактор</string>
+    <string name="viewer_delete_confirm">Удалить эту страницу из копии?</string>
+    <string name="viewer_last_page">PDF должен содержать хотя бы одну страницу.</string>
+    <string name="viewer_edit_help">Исходный документ не изменится.</string>
+    <string name="viewer_save_error">Не удалось сохранить PDF.</string>
+</resources>
