@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Tu estudio PDF sin conexión</string>
+    <string name="welcome">Documentos sin complicaciones.</string>
+    <string name="hero_desc">Herramientas PDF profesionales. Privadas y sin cuenta.</string>
+    <string name="home">Inicio</string>
+    <string name="tools">Herramientas</string>
+    <string name="recent">Recientes</string>
+    <string name="settings">Ajustes</string>
+    <string name="popular_tools">Herramientas esenciales</string>
+    <string name="all_tools">Todas las herramientas</string>
+    <string name="recent_files">Tus documentos</string>
+    <string name="merge">Unir PDF</string>
+    <string name="split">Dividir PDF</string>
+    <string name="extract">Extraer páginas</string>
+    <string name="rotate">Girar páginas</string>
+    <string name="image_to_pdf">Imágenes a PDF</string>
+    <string name="pdf_to_image">PDF a imágenes</string>
+    <string name="pdf_to_text">Extraer texto</string>
+    <string name="preview">Abrir PDF</string>
+    <string name="privacy_header">Privacidad primero</string>
+    <string name="privacy_desc">Los archivos permanecen en tu dispositivo. Todo funciona sin conexión.</string>
+    <string name="appearance">Apariencia</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="language">Idioma</string>
+    <string name="about">Acerca de</string>
+    <string name="action_processing">Procesando documentos…</string>
+    <string name="action_success">Archivo guardado</string>
+    <string name="action_failed">No se pudo procesar el archivo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="open">Abrir</string>
+    <string name="share">Compartir</string>
+    <string name="done">Listo</string>
+    <string name="offline">100 % sin conexión</string>
+    <string name="start_creating">Empezar</string>
+    <string name="no_recent">Todavía no hay documentos</string>
+    <string name="range_title">Páginas para extraer</string>
+    <string name="range_hint">Ejemplo: 1-3, 5, 8</string>
+    <string name="confirm">Continuar</string>
+    <string name="file_too_many">Elige al menos dos PDF.</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">您的离线 PDF 工作室</string>
+    <string name="welcome">轻松处理文档。</string>
+    <string name="hero_desc">专业 PDF 工具。无需账户，保护隐私。</string>
+    <string name="home">首页</string>
+    <string name="tools">工具</string>
+    <string name="recent">最近</string>
+    <string name="settings">设置</string>
+    <string name="popular_tools">常用工具</string>
+    <string name="all_tools">所有工具</string>
+    <string name="recent_files">您的文档</string>
+    <string name="merge">合并 PDF</string>
+    <string name="split">拆分 PDF</string>
+    <string name="extract">提取页面</string>
+    <string name="rotate">旋转页面</string>
+    <string name="image_to_pdf">图片转 PDF</string>
+    <string name="pdf_to_image">PDF 转图片</string>
+    <string name="pdf_to_text">提取文字</string>
+    <string name="preview">打开 PDF</string>
+    <string name="privacy_header">隐私至上</string>
+    <string name="privacy_desc">文件始终保留在您的设备上。所有操作离线完成。</string>
+    <string name="appearance">外观</string>
+    <string name="dark_mode">深色模式</string>
+    <string name="language">语言</string>
+    <string name="about">关于</string>
+    <string name="action_processing">正在处理文档…</string>
+    <string name="action_success">文件已保存</string>
+    <string name="action_failed">无法处理文件</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="open">打开</string>
+    <string name="share">分享</string>
+    <string name="done">完成</string>
+    <string name="offline">100% 离线</string>
+</resources>

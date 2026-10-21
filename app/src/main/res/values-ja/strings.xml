@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">オフラインPDFスタジオ</string>
+    <string name="welcome">書類の操作をもっと簡単に。</string>
+    <string name="hero_desc">プロ仕様のPDFツール。アカウント不要で安全。</string>
+    <string name="home">ホーム</string>
+    <string name="tools">ツール</string>
+    <string name="recent">最近</string>
+    <string name="settings">設定</string>
+    <string name="popular_tools">基本ツール</string>
+    <string name="all_tools">すべてのツール</string>
+    <string name="recent_files">ドキュメント</string>
+    <string name="merge">PDFを結合</string>
+    <string name="split">PDFを分割</string>
+    <string name="extract">ページを抽出</string>
+    <string name="rotate">ページを回転</string>
+    <string name="image_to_pdf">画像をPDFに</string>
+    <string name="pdf_to_image">PDFを画像に</string>
+    <string name="pdf_to_text">テキストを抽出</string>
+    <string name="preview">PDFを開く</string>
+    <string name="privacy_header">プライバシー優先</string>
+    <string name="privacy_desc">ファイルは端末内に保存。すべてオフラインで処理します。</string>
+    <string name="appearance">外観</string>
+    <string name="dark_mode">ダークモード</string>
+    <string name="language">言語</string>
+    <string name="about">アプリについて</string>
+    <string name="action_processing">処理中…</string>
+    <string name="action_success">保存しました</string>
+    <string name="action_failed">処理できませんでした</string>
+    <string name="cancel">キャンセル</string>
+    <string name="save">保存</string>
+    <string name="open">開く</string>
+    <string name="share">共有</string>
+    <string name="done">完了</string>
+    <string name="offline">完全オフライン</string>
+</resources>

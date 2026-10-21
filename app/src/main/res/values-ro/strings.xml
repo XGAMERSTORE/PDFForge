@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Studioul tău PDF offline</string>
+    <string name="welcome">Documente fără efort.</string>
+    <string name="hero_desc">Instrumente PDF profesionale. Private și fără cont.</string>
+    <string name="home">Acasă</string>
+    <string name="tools">Instrumente</string>
+    <string name="recent">Recente</string>
+    <string name="settings">Setări</string>
+    <string name="popular_tools">Instrumente esențiale</string>
+    <string name="all_tools">Toate instrumentele</string>
+    <string name="recent_files">Documentele tale</string>
+    <string name="merge">Unește PDF</string>
+    <string name="split">Împarte PDF</string>
+    <string name="extract">Extrage pagini</string>
+    <string name="rotate">Rotește pagini</string>
+    <string name="image_to_pdf">Imagini în PDF</string>
+    <string name="pdf_to_image">PDF în imagini</string>
+    <string name="pdf_to_text">Extrage text</string>
+    <string name="preview">Deschide PDF</string>
+    <string name="privacy_header">Confidențialitate întâi</string>
+    <string name="privacy_desc">Fișierele rămân pe dispozitiv. Totul funcționează offline.</string>
+    <string name="appearance">Aspect</string>
+    <string name="dark_mode">Mod întunecat</string>
+    <string name="language">Limbă</string>
+    <string name="about">Despre</string>
+    <string name="action_processing">Se procesează documentele…</string>
+    <string name="action_success">Fișier salvat</string>
+    <string name="action_failed">Fișierul nu poate fi procesat</string>
+    <string name="cancel">Anulare</string>
+    <string name="save">Salvare</string>
+    <string name="open">Deschide</string>
+    <string name="share">Distribuie</string>
+    <string name="done">Gata</string>
+    <string name="offline">100 % offline</string>
+</resources>

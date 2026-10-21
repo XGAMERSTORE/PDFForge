@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Offline PDF műhelyed</string>
+    <string name="welcome">Dokumentumok egyszerűen.</string>
+    <string name="hero_desc">Professzionális PDF eszközök. Privát és fiók nélkül.</string>
+    <string name="home">Kezdőlap</string>
+    <string name="tools">Eszközök</string>
+    <string name="recent">Legutóbbi</string>
+    <string name="settings">Beállítások</string>
+    <string name="popular_tools">Fontos eszközök</string>
+    <string name="all_tools">Összes eszköz</string>
+    <string name="recent_files">Dokumentumok</string>
+    <string name="merge">PDF egyesítése</string>
+    <string name="split">PDF szétválasztása</string>
+    <string name="extract">Oldalak kinyerése</string>
+    <string name="rotate">Oldalak forgatása</string>
+    <string name="image_to_pdf">Képekből PDF</string>
+    <string name="pdf_to_image">PDF-ből képek</string>
+    <string name="pdf_to_text">Szöveg kinyerése</string>
+    <string name="preview">PDF megnyitása</string>
+    <string name="privacy_header">Az adatvédelem az első</string>
+    <string name="privacy_desc">A fájlok az eszközön maradnak. Minden offline működik.</string>
+    <string name="appearance">Megjelenés</string>
+    <string name="dark_mode">Sötét mód</string>
+    <string name="language">Nyelv</string>
+    <string name="about">Névjegy</string>
+    <string name="action_processing">Dokumentumok feldolgozása…</string>
+    <string name="action_success">Fájl elmentve</string>
+    <string name="action_failed">A fájl nem dolgozható fel</string>
+    <string name="cancel">Mégse</string>
+    <string name="save">Mentés</string>
+    <string name="open">Megnyitás</string>
+    <string name="share">Megosztás</string>
+    <string name="done">Kész</string>
+    <string name="offline">100 % offline</string>
+</resources>

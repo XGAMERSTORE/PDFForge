@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Bộ công cụ PDF ngoại tuyến</string>
+    <string name="welcome">Xử lý tài liệu thật dễ dàng.</string>
+    <string name="hero_desc">Công cụ PDF chuyên nghiệp. Riêng tư và không cần tài khoản.</string>
+    <string name="home">Trang chủ</string>
+    <string name="tools">Công cụ</string>
+    <string name="recent">Gần đây</string>
+    <string name="settings">Cài đặt</string>
+    <string name="popular_tools">Công cụ chính</string>
+    <string name="all_tools">Tất cả công cụ</string>
+    <string name="recent_files">Tài liệu của bạn</string>
+    <string name="merge">Ghép PDF</string>
+    <string name="split">Tách PDF</string>
+    <string name="extract">Trích xuất trang</string>
+    <string name="rotate">Xoay trang</string>
+    <string name="image_to_pdf">Ảnh sang PDF</string>
+    <string name="pdf_to_image">PDF sang ảnh</string>
+    <string name="pdf_to_text">Trích xuất văn bản</string>
+    <string name="preview">Mở PDF</string>
+    <string name="privacy_header">Ưu tiên quyền riêng tư</string>
+    <string name="privacy_desc">Tệp nằm trên thiết bị. Mọi thao tác đều ngoại tuyến.</string>
+    <string name="appearance">Giao diện</string>
+    <string name="dark_mode">Chế độ tối</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="about">Giới thiệu</string>
+    <string name="action_processing">Đang xử lý tài liệu…</string>
+    <string name="action_success">Đã lưu tệp</string>
+    <string name="action_failed">Không thể xử lý tệp</string>
+    <string name="cancel">Hủy</string>
+    <string name="save">Lưu</string>
+    <string name="open">Mở</string>
+    <string name="share">Chia sẻ</string>
+    <string name="done">Xong</string>
+    <string name="offline">100% ngoại tuyến</string>
+</resources>

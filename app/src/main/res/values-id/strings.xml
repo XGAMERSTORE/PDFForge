@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Studio PDF offline Anda</string>
+    <string name="welcome">Dokumen jadi lebih mudah.</string>
+    <string name="hero_desc">Alat PDF profesional. Privat tanpa akun.</string>
+    <string name="home">Beranda</string>
+    <string name="tools">Alat</string>
+    <string name="recent">Terbaru</string>
+    <string name="settings">Pengaturan</string>
+    <string name="popular_tools">Alat utama</string>
+    <string name="all_tools">Semua alat</string>
+    <string name="recent_files">Dokumen Anda</string>
+    <string name="merge">Gabungkan PDF</string>
+    <string name="split">Pisah PDF</string>
+    <string name="extract">Ekstrak halaman</string>
+    <string name="rotate">Putar halaman</string>
+    <string name="image_to_pdf">Gambar ke PDF</string>
+    <string name="pdf_to_image">PDF ke gambar</string>
+    <string name="pdf_to_text">Ekstrak teks</string>
+    <string name="preview">Buka PDF</string>
+    <string name="privacy_header">Privasi utama</string>
+    <string name="privacy_desc">File tetap di perangkat Anda. Semua diproses offline.</string>
+    <string name="appearance">Tampilan</string>
+    <string name="dark_mode">Mode gelap</string>
+    <string name="language">Bahasa</string>
+    <string name="about">Tentang</string>
+    <string name="action_processing">Memproses dokumen…</string>
+    <string name="action_success">File tersimpan</string>
+    <string name="action_failed">Gagal memproses file</string>
+    <string name="cancel">Batal</string>
+    <string name="save">Simpan</string>
+    <string name="open">Buka</string>
+    <string name="share">Bagikan</string>
+    <string name="done">Selesai</string>
+    <string name="offline">100% offline</string>
+</resources>

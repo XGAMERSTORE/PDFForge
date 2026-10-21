@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Ваша офлайн PDF-студія</string>
+    <string name="welcome">Документи без зайвих зусиль.</string>
+    <string name="hero_desc">Професійні PDF-інструменти. Приватно та без облікового запису.</string>
+    <string name="home">Головна</string>
+    <string name="tools">Інструменти</string>
+    <string name="recent">Недавні</string>
+    <string name="settings">Налаштування</string>
+    <string name="popular_tools">Основні інструменти</string>
+    <string name="all_tools">Усі інструменти</string>
+    <string name="recent_files">Ваші документи</string>
+    <string name="merge">Об’єднати PDF</string>
+    <string name="split">Розділити PDF</string>
+    <string name="extract">Витягти сторінки</string>
+    <string name="rotate">Повернути сторінки</string>
+    <string name="image_to_pdf">Зображення в PDF</string>
+    <string name="pdf_to_image">PDF у зображення</string>
+    <string name="pdf_to_text">Витягти текст</string>
+    <string name="preview">Відкрити PDF</string>
+    <string name="privacy_header">Приватність понад усе</string>
+    <string name="privacy_desc">Файли залишаються на пристрої. Усе працює офлайн.</string>
+    <string name="appearance">Вигляд</string>
+    <string name="dark_mode">Темна тема</string>
+    <string name="language">Мова</string>
+    <string name="about">Про застосунок</string>
+    <string name="action_processing">Обробка документів…</string>
+    <string name="action_success">Файл збережено</string>
+    <string name="action_failed">Не вдалося обробити файл</string>
+    <string name="cancel">Скасувати</string>
+    <string name="save">Зберегти</string>
+    <string name="open">Відкрити</string>
+    <string name="share">Поділитися</string>
+    <string name="done">Готово</string>
+    <string name="offline">100 % офлайн</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Dein Offline-PDF-Studio</string>
+    <string name="welcome">Dokumente ganz einfach bearbeiten.</string>
+    <string name="hero_desc">Professionelle PDF-Werkzeuge. Privat und ohne Konto.</string>
+    <string name="home">Start</string>
+    <string name="tools">Werkzeuge</string>
+    <string name="recent">Zuletzt</string>
+    <string name="settings">Einstellungen</string>
+    <string name="popular_tools">Wichtige Werkzeuge</string>
+    <string name="all_tools">Alle Werkzeuge</string>
+    <string name="recent_files">Deine Dokumente</string>
+    <string name="merge">PDFs verbinden</string>
+    <string name="split">PDF aufteilen</string>
+    <string name="extract">Seiten extrahieren</string>
+    <string name="rotate">Seiten drehen</string>
+    <string name="image_to_pdf">Bilder zu PDF</string>
+    <string name="pdf_to_image">PDF zu Bildern</string>
+    <string name="pdf_to_text">Text extrahieren</string>
+    <string name="preview">PDF öffnen</string>
+    <string name="privacy_header">Datenschutz zuerst</string>
+    <string name="privacy_desc">Dateien bleiben auf deinem Gerät. Alles läuft offline.</string>
+    <string name="appearance">Design</string>
+    <string name="dark_mode">Dunkelmodus</string>
+    <string name="language">Sprache</string>
+    <string name="about">Über PDFForge</string>
+    <string name="action_processing">Dokumente werden verarbeitet…</string>
+    <string name="action_success">Datei erfolgreich gespeichert</string>
+    <string name="action_failed">Datei konnte nicht verarbeitet werden</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="save">Speichern</string>
+    <string name="open">Öffnen</string>
+    <string name="share">Teilen</string>
+    <string name="done">Fertig</string>
+    <string name="offline">100 % offline</string>
+    <string name="start_creating">Jetzt loslegen</string>
+    <string name="no_recent">Noch keine Dokumente</string>
+    <string name="range_title">Seiten auswählen</string>
+    <string name="range_hint">Beispiel: 1-3, 5, 8</string>
+    <string name="confirm">Weiter</string>
+    <string name="file_too_many">Mindestens zwei PDFs auswählen.</string>
+</resources>

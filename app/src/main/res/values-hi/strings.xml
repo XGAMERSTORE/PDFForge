@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">आपका ऑफ़लाइन PDF स्टूडियो</string>
+    <string name="welcome">दस्तावेज़ आसान बनाएं।</string>
+    <string name="hero_desc">पेशेवर PDF टूल। निजी और बिना खाते के।</string>
+    <string name="home">होम</string>
+    <string name="tools">टूल</string>
+    <string name="recent">हाल ही के</string>
+    <string name="settings">सेटिंग</string>
+    <string name="popular_tools">ज़रूरी टूल</string>
+    <string name="all_tools">सभी टूल</string>
+    <string name="recent_files">आपके दस्तावेज़</string>
+    <string name="merge">PDF जोड़ें</string>
+    <string name="split">PDF विभाजित करें</string>
+    <string name="extract">पेज निकालें</string>
+    <string name="rotate">पेज घुमाएं</string>
+    <string name="image_to_pdf">छवियों से PDF</string>
+    <string name="pdf_to_image">PDF से छवियां</string>
+    <string name="pdf_to_text">टेक्स्ट निकालें</string>
+    <string name="preview">PDF खोलें</string>
+    <string name="privacy_header">गोपनीयता पहले</string>
+    <string name="privacy_desc">फ़ाइलें आपके डिवाइस पर रहती हैं। सब कुछ ऑफ़लाइन है।</string>
+    <string name="appearance">दिखावट</string>
+    <string name="dark_mode">डार्क मोड</string>
+    <string name="language">भाषा</string>
+    <string name="about">ऐप के बारे में</string>
+    <string name="action_processing">दस्तावेज़ संसाधित हो रहे हैं…</string>
+    <string name="action_success">फ़ाइल सहेजी गई</string>
+    <string name="action_failed">फ़ाइल संसाधित नहीं हुई</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="save">सहेजें</string>
+    <string name="open">खोलें</string>
+    <string name="share">शेयर करें</string>
+    <string name="done">पूर्ण</string>
+    <string name="offline">100% ऑफ़लाइन</string>
+</resources>

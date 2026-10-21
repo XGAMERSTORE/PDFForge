@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Jouw offline PDF-studio</string>
+    <string name="welcome">Documenten zonder gedoe.</string>
+    <string name="hero_desc">Professionele PDF-tools. Privé en zonder account.</string>
+    <string name="home">Home</string>
+    <string name="tools">Tools</string>
+    <string name="recent">Recent</string>
+    <string name="settings">Instellingen</string>
+    <string name="popular_tools">Belangrijkste tools</string>
+    <string name="all_tools">Alle tools</string>
+    <string name="recent_files">Je documenten</string>
+    <string name="merge">PDF samenvoegen</string>
+    <string name="split">PDF splitsen</string>
+    <string name="extract">Pagina\'s extraheren</string>
+    <string name="rotate">Pagina\'s draaien</string>
+    <string name="image_to_pdf">Afbeeldingen naar PDF</string>
+    <string name="pdf_to_image">PDF naar afbeeldingen</string>
+    <string name="pdf_to_text">Tekst extraheren</string>
+    <string name="preview">PDF openen</string>
+    <string name="privacy_header">Privacy voorop</string>
+    <string name="privacy_desc">Bestanden blijven op je apparaat. Alles werkt offline.</string>
+    <string name="appearance">Uiterlijk</string>
+    <string name="dark_mode">Donkere modus</string>
+    <string name="language">Taal</string>
+    <string name="about">Over</string>
+    <string name="action_processing">Documenten verwerken…</string>
+    <string name="action_success">Bestand opgeslagen</string>
+    <string name="action_failed">Bestand kan niet worden verwerkt</string>
+    <string name="cancel">Annuleren</string>
+    <string name="save">Opslaan</string>
+    <string name="open">Openen</string>
+    <string name="share">Delen</string>
+    <string name="done">Gereed</string>
+    <string name="offline">100 % offline</string>
+</resources>

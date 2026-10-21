@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Ваша офлайн PDF-студия</string>
+    <string name="welcome">Документы без лишних усилий.</string>
+    <string name="hero_desc">Профессиональные PDF-инструменты. Приватно и без аккаунта.</string>
+    <string name="home">Главная</string>
+    <string name="tools">Инструменты</string>
+    <string name="recent">Недавние</string>
+    <string name="settings">Настройки</string>
+    <string name="popular_tools">Основные инструменты</string>
+    <string name="all_tools">Все инструменты</string>
+    <string name="recent_files">Ваши документы</string>
+    <string name="merge">Объединить PDF</string>
+    <string name="split">Разделить PDF</string>
+    <string name="extract">Извлечь страницы</string>
+    <string name="rotate">Повернуть страницы</string>
+    <string name="image_to_pdf">Изображения в PDF</string>
+    <string name="pdf_to_image">PDF в изображения</string>
+    <string name="pdf_to_text">Извлечь текст</string>
+    <string name="preview">Открыть PDF</string>
+    <string name="privacy_header">Приватность прежде всего</string>
+    <string name="privacy_desc">Файлы остаются на устройстве. Всё работает офлайн.</string>
+    <string name="appearance">Оформление</string>
+    <string name="dark_mode">Тёмная тема</string>
+    <string name="language">Язык</string>
+    <string name="about">О приложении</string>
+    <string name="action_processing">Обработка документов…</string>
+    <string name="action_success">Файл сохранён</string>
+    <string name="action_failed">Не удалось обработать файл</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="open">Открыть</string>
+    <string name="share">Поделиться</string>
+    <string name="done">Готово</string>
+    <string name="offline">100 % офлайн</string>
+</resources>

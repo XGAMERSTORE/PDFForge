@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Vaše offline PDF štúdio</string>
+    <string name="welcome">Práca s dokumentmi bez námahy.</string>
+    <string name="hero_desc">Profesionálne PDF nástroje. Súkromie na prvom mieste. Bez účtu.</string>
+    <string name="home">Domov</string>
+    <string name="tools">Nástroje</string>
+    <string name="recent">Nedávne</string>
+    <string name="settings">Nastavenia</string>
+    <string name="popular_tools">Hlavné nástroje</string>
+    <string name="all_tools">Všetky nástroje</string>
+    <string name="recent_files">Vaše dokumenty</string>
+    <string name="merge">Spojiť PDF</string>
+    <string name="split">Rozdeliť PDF</string>
+    <string name="extract">Vybrať strany</string>
+    <string name="rotate">Otočiť strany</string>
+    <string name="image_to_pdf">Obrázky do PDF</string>
+    <string name="pdf_to_image">PDF na obrázky</string>
+    <string name="pdf_to_text">Extrahovať text</string>
+    <string name="preview">Otvoriť PDF</string>
+    <string name="privacy_header">Súkromie na prvom mieste</string>
+    <string name="privacy_desc">Súbory zostávajú v zariadení. Všetko funguje offline.</string>
+    <string name="appearance">Vzhľad</string>
+    <string name="dark_mode">Tmavý režim</string>
+    <string name="language">Jazyk</string>
+    <string name="about">O aplikácii</string>
+    <string name="action_processing">Spracovávam dokumenty…</string>
+    <string name="action_success">Súbor bol uložený</string>
+    <string name="action_failed">Súbor sa nedá spracovať</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="save">Uložiť</string>
+    <string name="open">Otvoriť</string>
+    <string name="share">Zdieľať</string>
+    <string name="done">Hotovo</string>
+    <string name="offline">100 % offline</string>
+    <string name="start_creating">Začať tvoriť</string>
+    <string name="no_recent">Zatiaľ žiadne dokumenty</string>
+    <string name="range_title">Strany na výber</string>
+    <string name="range_hint">Napríklad: 1-3, 5, 8</string>
+    <string name="confirm">Pokračovať</string>
+    <string name="file_too_many">Vyberte aspoň dva PDF súbory.</string>
+    <string name="clear_recent">Vymazať nedávne</string>
+</resources>

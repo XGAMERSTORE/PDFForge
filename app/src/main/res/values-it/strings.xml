@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Il tuo studio PDF offline</string>
+    <string name="welcome">Documenti senza complicazioni.</string>
+    <string name="hero_desc">Strumenti PDF professionali. Privati e senza account.</string>
+    <string name="home">Home</string>
+    <string name="tools">Strumenti</string>
+    <string name="recent">Recenti</string>
+    <string name="settings">Impostazioni</string>
+    <string name="popular_tools">Strumenti essenziali</string>
+    <string name="all_tools">Tutti gli strumenti</string>
+    <string name="recent_files">I tuoi documenti</string>
+    <string name="merge">Unisci PDF</string>
+    <string name="split">Dividi PDF</string>
+    <string name="extract">Estrai pagine</string>
+    <string name="rotate">Ruota pagine</string>
+    <string name="image_to_pdf">Immagini in PDF</string>
+    <string name="pdf_to_image">PDF in immagini</string>
+    <string name="pdf_to_text">Estrai testo</string>
+    <string name="preview">Apri PDF</string>
+    <string name="privacy_header">Privacy al primo posto</string>
+    <string name="privacy_desc">I file restano sul dispositivo. Tutto funziona offline.</string>
+    <string name="appearance">Aspetto</string>
+    <string name="dark_mode">Modalità scura</string>
+    <string name="language">Lingua</string>
+    <string name="about">Informazioni</string>
+    <string name="action_processing">Elaborazione documenti…</string>
+    <string name="action_success">File salvato</string>
+    <string name="action_failed">Impossibile elaborare il file</string>
+    <string name="cancel">Annulla</string>
+    <string name="save">Salva</string>
+    <string name="open">Apri</string>
+    <string name="share">Condividi</string>
+    <string name="done">Fatto</string>
+    <string name="offline">100 % offline</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Twoje studio PDF offline</string>
+    <string name="welcome">Dokumenty bez wysiłku.</string>
+    <string name="hero_desc">Profesjonalne narzędzia PDF. Prywatnie i bez konta.</string>
+    <string name="home">Start</string>
+    <string name="tools">Narzędzia</string>
+    <string name="recent">Ostatnie</string>
+    <string name="settings">Ustawienia</string>
+    <string name="popular_tools">Najważniejsze narzędzia</string>
+    <string name="all_tools">Wszystkie narzędzia</string>
+    <string name="recent_files">Twoje dokumenty</string>
+    <string name="merge">Połącz PDF</string>
+    <string name="split">Podziel PDF</string>
+    <string name="extract">Wyodrębnij strony</string>
+    <string name="rotate">Obróć strony</string>
+    <string name="image_to_pdf">Obrazy do PDF</string>
+    <string name="pdf_to_image">PDF na obrazy</string>
+    <string name="pdf_to_text">Wyodrębnij tekst</string>
+    <string name="preview">Otwórz PDF</string>
+    <string name="privacy_header">Prywatność przede wszystkim</string>
+    <string name="privacy_desc">Pliki pozostają na urządzeniu. Wszystko działa offline.</string>
+    <string name="appearance">Wygląd</string>
+    <string name="dark_mode">Tryb ciemny</string>
+    <string name="language">Język</string>
+    <string name="about">O aplikacji</string>
+    <string name="action_processing">Przetwarzanie dokumentów…</string>
+    <string name="action_success">Plik zapisany</string>
+    <string name="action_failed">Nie można przetworzyć pliku</string>
+    <string name="cancel">Anuluj</string>
+    <string name="save">Zapisz</string>
+    <string name="open">Otwórz</string>
+    <string name="share">Udostępnij</string>
+    <string name="done">Gotowe</string>
+    <string name="offline">100 % offline</string>
+    <string name="start_creating">Rozpocznij</string>
+    <string name="no_recent">Brak dokumentów</string>
+    <string name="range_title">Strony do wyodrębnienia</string>
+    <string name="range_hint">Na przykład: 1-3, 5, 8</string>
+    <string name="confirm">Kontynuuj</string>
+    <string name="file_too_many">Wybierz co najmniej dwa pliki PDF.</string>
+</resources>

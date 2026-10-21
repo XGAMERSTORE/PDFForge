@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Seu estúdio PDF offline</string>
+    <string name="welcome">Documentos sem complicações.</string>
+    <string name="hero_desc">Ferramentas PDF profissionais. Privadas e sem conta.</string>
+    <string name="home">Início</string>
+    <string name="tools">Ferramentas</string>
+    <string name="recent">Recentes</string>
+    <string name="settings">Configurações</string>
+    <string name="popular_tools">Ferramentas principais</string>
+    <string name="all_tools">Todas as ferramentas</string>
+    <string name="recent_files">Seus documentos</string>
+    <string name="merge">Unir PDFs</string>
+    <string name="split">Dividir PDF</string>
+    <string name="extract">Extrair páginas</string>
+    <string name="rotate">Girar páginas</string>
+    <string name="image_to_pdf">Imagens para PDF</string>
+    <string name="pdf_to_image">PDF para imagens</string>
+    <string name="pdf_to_text">Extrair texto</string>
+    <string name="preview">Abrir PDF</string>
+    <string name="privacy_header">Privacidade em primeiro lugar</string>
+    <string name="privacy_desc">Os arquivos ficam no dispositivo. Tudo funciona offline.</string>
+    <string name="appearance">Aparência</string>
+    <string name="dark_mode">Modo escuro</string>
+    <string name="language">Idioma</string>
+    <string name="about">Sobre</string>
+    <string name="action_processing">Processando documentos…</string>
+    <string name="action_success">Arquivo salvo</string>
+    <string name="action_failed">Não foi possível processar o arquivo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Salvar</string>
+    <string name="open">Abrir</string>
+    <string name="share">Compartilhar</string>
+    <string name="done">Concluído</string>
+    <string name="offline">100 % offline</string>
+</resources>

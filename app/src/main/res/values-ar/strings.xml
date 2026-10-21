@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">استوديو PDF دون اتصال</string>
+    <string name="welcome">إدارة المستندات بكل سهولة.</string>
+    <string name="hero_desc">أدوات PDF احترافية وخاصة دون حساب.</string>
+    <string name="home">الرئيسية</string>
+    <string name="tools">الأدوات</string>
+    <string name="recent">الأخيرة</string>
+    <string name="settings">الإعدادات</string>
+    <string name="popular_tools">الأدوات الأساسية</string>
+    <string name="all_tools">جميع الأدوات</string>
+    <string name="recent_files">مستنداتك</string>
+    <string name="merge">دمج PDF</string>
+    <string name="split">تقسيم PDF</string>
+    <string name="extract">استخراج صفحات</string>
+    <string name="rotate">تدوير صفحات</string>
+    <string name="image_to_pdf">الصور إلى PDF</string>
+    <string name="pdf_to_image">PDF إلى صور</string>
+    <string name="pdf_to_text">استخراج النص</string>
+    <string name="preview">فتح PDF</string>
+    <string name="privacy_header">الخصوصية أولاً</string>
+    <string name="privacy_desc">تبقى الملفات على جهازك. تتم كل العمليات دون اتصال.</string>
+    <string name="appearance">المظهر</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="language">اللغة</string>
+    <string name="about">حول التطبيق</string>
+    <string name="action_processing">جار معالجة المستندات…</string>
+    <string name="action_success">تم حفظ الملف</string>
+    <string name="action_failed">تعذرت معالجة الملف</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save">حفظ</string>
+    <string name="open">فتح</string>
+    <string name="share">مشاركة</string>
+    <string name="done">تم</string>
+    <string name="offline">دون اتصال 100%</string>
+</resources>

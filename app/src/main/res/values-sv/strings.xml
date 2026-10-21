@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Din PDF-studio offline</string>
+    <string name="welcome">Hantera dokument enkelt.</string>
+    <string name="hero_desc">Professionella PDF-verktyg. Privat och utan konto.</string>
+    <string name="home">Hem</string>
+    <string name="tools">Verktyg</string>
+    <string name="recent">Senaste</string>
+    <string name="settings">Inställningar</string>
+    <string name="popular_tools">Viktiga verktyg</string>
+    <string name="all_tools">Alla verktyg</string>
+    <string name="recent_files">Dina dokument</string>
+    <string name="merge">Sammanfoga PDF</string>
+    <string name="split">Dela PDF</string>
+    <string name="extract">Extrahera sidor</string>
+    <string name="rotate">Rotera sidor</string>
+    <string name="image_to_pdf">Bilder till PDF</string>
+    <string name="pdf_to_image">PDF till bilder</string>
+    <string name="pdf_to_text">Extrahera text</string>
+    <string name="preview">Öppna PDF</string>
+    <string name="privacy_header">Integritet först</string>
+    <string name="privacy_desc">Filerna stannar på enheten. Allt fungerar offline.</string>
+    <string name="appearance">Utseende</string>
+    <string name="dark_mode">Mörkt läge</string>
+    <string name="language">Språk</string>
+    <string name="about">Om appen</string>
+    <string name="action_processing">Bearbetar dokument…</string>
+    <string name="action_success">Filen har sparats</string>
+    <string name="action_failed">Kunde inte bearbeta filen</string>
+    <string name="cancel">Avbryt</string>
+    <string name="save">Spara</string>
+    <string name="open">Öppna</string>
+    <string name="share">Dela</string>
+    <string name="done">Klart</string>
+    <string name="offline">100 % offline</string>
+</resources>

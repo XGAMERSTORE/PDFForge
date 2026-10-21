@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">Çevrimdışı PDF stüdyonuz</string>
+    <string name="welcome">Belgeleri kolayca yönetin.</string>
+    <string name="hero_desc">Profesyonel PDF araçları. Gizli ve hesapsız.</string>
+    <string name="home">Ana sayfa</string>
+    <string name="tools">Araçlar</string>
+    <string name="recent">Son dosyalar</string>
+    <string name="settings">Ayarlar</string>
+    <string name="popular_tools">Temel araçlar</string>
+    <string name="all_tools">Tüm araçlar</string>
+    <string name="recent_files">Belgeleriniz</string>
+    <string name="merge">PDF birleştir</string>
+    <string name="split">PDF böl</string>
+    <string name="extract">Sayfa çıkar</string>
+    <string name="rotate">Sayfaları döndür</string>
+    <string name="image_to_pdf">Görselleri PDF yap</string>
+    <string name="pdf_to_image">PDF görsellerine dönüştür</string>
+    <string name="pdf_to_text">Metni çıkar</string>
+    <string name="preview">PDF aç</string>
+    <string name="privacy_header">Önce gizlilik</string>
+    <string name="privacy_desc">Dosyalar cihazınızda kalır. Her şey çevrimdışı çalışır.</string>
+    <string name="appearance">Görünüm</string>
+    <string name="dark_mode">Koyu mod</string>
+    <string name="language">Dil</string>
+    <string name="about">Hakkında</string>
+    <string name="action_processing">Belgeler işleniyor…</string>
+    <string name="action_success">Dosya kaydedildi</string>
+    <string name="action_failed">Dosya işlenemedi</string>
+    <string name="cancel">İptal</string>
+    <string name="save">Kaydet</string>
+    <string name="open">Aç</string>
+    <string name="share">Paylaş</string>
+    <string name="done">Bitti</string>
+    <string name="offline">%100 çevrimdışı</string>
+</resources>
