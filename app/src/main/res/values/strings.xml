@@ -28,6 +28,12 @@
     <string name="pdf_to_image_desc">Export every page as PNG in a ZIP</string>
     <string name="pdf_to_text">Extract text</string>
     <string name="pdf_to_text_desc">Export searchable text as a TXT file</string>
+    <string name="sign">Sign PDF</string>
+    <string name="sign_desc">Draw your signature on the last page</string>
+    <string name="sign_title">Draw your signature</string>
+    <string name="sign_note">A visible signature, not a certificate-based digital signature. Added to the bottom-right of the last page.</string>
+    <string name="sign_empty">Draw a signature first</string>
+    <string name="clear_signature">Clear</string>
     <string name="preview">Open PDF</string>
     <string name="preview_desc">View a PDF with your installed reader</string>
     <string name="privacy_header">Privacy first</string>

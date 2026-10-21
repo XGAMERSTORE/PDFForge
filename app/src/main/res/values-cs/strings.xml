@@ -23,6 +23,12 @@
     <string name="appearance">Vzhled</string>
     <string name="dark_mode">Tmavý režim</string>
     <string name="language">Jazyk</string>
+    <string name="sign">Podepsat PDF</string>
+    <string name="sign_desc">Nakreslit podpis na poslední stránku</string>
+    <string name="sign_title">Nakreslete podpis</string>
+    <string name="sign_note">Jde o viditelný podpis, nikoli certifikovaný digitální podpis. Bude vložen vpravo dole na poslední stránce.</string>
+    <string name="sign_empty">Nejdřív nakreslete podpis</string>
+    <string name="clear_signature">Vymazat</string>
     <string name="about">O aplikaci</string>
     <string name="action_processing">Zpracovávám dokumenty…</string>
     <string name="action_success">Soubor byl uložen</string>

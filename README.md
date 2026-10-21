@@ -9,6 +9,7 @@ Native Android app built in Java. Modern dark/light dashboard, English-first loc
 - Import photos and create a PDF
 - Render PDF pages to PNG images inside ZIP
 - Extract searchable text into TXT
+- Draw a visible handwritten signature on the last PDF page (not a cryptographic digital signature)
 - Recent documents, Storage Access Framework, dark mode, device-language support
 
 Works completely offline. No account, no advertising SDK, no analytics, no INTERNET permission. Uses [PdfBox-Android](https://github.com/TomRoush/PdfBox-Android) (Apache 2.0).

@@ -16,6 +16,9 @@ import com.tom_roush.pdfbox.io.MemoryUsageSetting;
 import com.tom_roush.pdfbox.multipdf.PDFMergerUtility;
 import com.tom_roush.pdfbox.pdmodel.PDDocument;
 import com.tom_roush.pdfbox.pdmodel.PDPage;
+import com.tom_roush.pdfbox.pdmodel.PDPageContentStream;
+import com.tom_roush.pdfbox.pdmodel.graphics.image.LosslessFactory;
+import com.tom_roush.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import com.tom_roush.pdfbox.text.PDFTextStripper;
 
 import java.io.ByteArrayOutputStream;
@@ -36,7 +39,7 @@ import java.util.zip.ZipOutputStream;
 
 /** Offline PDF operations. All methods are invoked from a background thread. */
 final class PdfEngine {
-    enum Action { MERGE, SPLIT, EXTRACT, ROTATE, IMAGE_TO_PDF, PDF_TO_IMAGE, PDF_TO_TEXT }
+    enum Action { MERGE, SPLIT, EXTRACT, ROTATE, IMAGE_TO_PDF, PDF_TO_IMAGE, PDF_TO_TEXT, SIGN }
     private PdfEngine() {}
 
     static void execute(Context context, Action action, List<Uri> files,
@@ -52,6 +55,7 @@ final class PdfEngine {
                 case IMAGE_TO_PDF: imagesToPdf(context, files, result); break;
                 case PDF_TO_IMAGE: pdfToImages(context, files.get(0), result); break;
                 case PDF_TO_TEXT: pdfToText(context, files.get(0), result); break;
+                case SIGN: sign(context, files.get(0), parameter, result); break;
             }
             result.flush();
         }
@@ -229,6 +233,31 @@ final class PdfEngine {
             }
         } finally {
             if (!cache.delete()) cache.deleteOnExit();
+        }
+    }
+
+
+    /** Visible image signature on the last page; NOT certificate-based signing. */
+    private static void sign(Context ctx, Uri uri, String signaturePath, OutputStream output) throws IOException {
+        File imageFile = new File(signaturePath);
+        Bitmap bitmap = BitmapFactory.decodeFile(imageFile.getAbsolutePath());
+        if (bitmap == null) throw new IOException("No signature image available.");
+        try (PDDocument document = open(ctx, uri)) {
+            if (document.getNumberOfPages() <= 0) throw new IOException("PDF has no pages.");
+            PDPage page = document.getPage(document.getNumberOfPages() - 1);
+            PDImageXObject signature = LosslessFactory.createFromImage(document, bitmap);
+            float width = Math.min(190f, page.getMediaBox().getWidth() * 0.44f);
+            float height = width * bitmap.getHeight() / (float) bitmap.getWidth();
+            float x = Math.max(8f, page.getMediaBox().getWidth() - width - 28f);
+            float y = 28f;
+            try (PDPageContentStream content = new PDPageContentStream(
+                    document, page, PDPageContentStream.AppendMode.APPEND, true, true)) {
+                content.drawImage(signature, x, y, width, height);
+            }
+            document.save(output);
+        } finally {
+            bitmap.recycle();
+            if (!imageFile.delete()) imageFile.deleteOnExit();
         }
     }
 

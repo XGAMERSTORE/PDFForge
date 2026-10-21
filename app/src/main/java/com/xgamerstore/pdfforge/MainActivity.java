@@ -8,7 +8,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
@@ -18,6 +23,7 @@ import android.provider.OpenableColumns;
 import android.provider.Settings;
 import android.text.InputType;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
@@ -38,6 +44,8 @@ import com.tom_roush.pdfbox.android.PDFBoxResourceLoader;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -83,6 +91,7 @@ public class MainActivity extends Activity {
         toolList.add(new Tool(R.string.image_to_pdf,R.string.image_to_pdf_desc,"▧",PALETTE[4],PdfEngine.Action.IMAGE_TO_PDF));
         toolList.add(new Tool(R.string.pdf_to_image,R.string.pdf_to_image_desc,"▤",PALETTE[5],PdfEngine.Action.PDF_TO_IMAGE));
         toolList.add(new Tool(R.string.pdf_to_text,R.string.pdf_to_text_desc,"T",PALETTE[6],PdfEngine.Action.PDF_TO_TEXT));
+        toolList.add(new Tool(R.string.sign,R.string.sign_desc,"✎",PALETTE[3],PdfEngine.Action.SIGN));
         toolList.add(new Tool(R.string.preview,R.string.preview_desc,"↗",PALETTE[7],null));
         draw();
     }
@@ -445,6 +454,7 @@ public class MainActivity extends Activity {
             if(pending.action==PdfEngine.Action.MERGE && selected.size()<2) {
                 error(getString(R.string.file_too_many));return;
             }
+            if(pending.action==PdfEngine.Action.SIGN) { requestSignature(); return; }
             if(pending.action==PdfEngine.Action.EXTRACT || pending.action==PdfEngine.Action.ROTATE) {
                 requestRange();return;
             }
@@ -455,6 +465,80 @@ public class MainActivity extends Activity {
             catch(Exception ignored){}
             execute(destination);
         }
+    }
+
+
+    /** Draw-on-screen e-signature pad, exported as a temporary transparent PNG. */
+    private static final class SignaturePad extends View {
+        private final Paint pen = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Path strokes = new Path();
+        private boolean hasInk;
+        SignaturePad(Activity activity) {
+            super(activity);
+            pen.setColor(Color.rgb(38, 35, 74));
+            pen.setStyle(Paint.Style.STROKE);
+            pen.setStrokeWidth(5f);
+            pen.setStrokeCap(Paint.Cap.ROUND);
+            pen.setStrokeJoin(Paint.Join.ROUND);
+            setBackgroundColor(Color.WHITE);
+        }
+        @Override protected void onDraw(Canvas canvas) {
+            super.onDraw(canvas);
+            canvas.drawPath(strokes, pen);
+        }
+        @Override public boolean onTouchEvent(MotionEvent event) {
+            float x = event.getX(), y = event.getY();
+            switch(event.getActionMasked()) {
+                case MotionEvent.ACTION_DOWN: strokes.moveTo(x,y); return true;
+                case MotionEvent.ACTION_MOVE: strokes.lineTo(x,y); hasInk=true; invalidate(); return true;
+                case MotionEvent.ACTION_UP: strokes.lineTo(x,y); hasInk=true;invalidate();return true;
+            }
+            return true;
+        }
+        void clear() {strokes.reset();hasInk=false;invalidate();}
+        boolean signed() {return hasInk;}
+        Bitmap signature() {
+            Bitmap bmp = Bitmap.createBitmap(1000, 320, Bitmap.Config.ARGB_8888);
+            Canvas image = new Canvas(bmp);
+            image.scale(1000f / Math.max(1,getWidth()), 320f / Math.max(1,getHeight()));
+            image.drawPath(strokes, pen);
+            return bmp;
+        }
+    }
+
+    private void requestSignature() {
+        SignaturePad pad = new SignaturePad(this);
+        LinearLayout body = vertical();
+        inset(body,20,12,20,4);
+        body.addView(pad,lp(-1,200));
+        body.addView(gap(12));
+        TextView info = label(R.string.sign_note,12,false,secondary());
+        body.addView(info,lp(-1,-2));
+        AlertDialog alert = new AlertDialog.Builder(this)
+            .setTitle(R.string.sign_title).setView(body)
+            .setNegativeButton(R.string.cancel,null)
+            .setNeutralButton(R.string.clear_signature,(d,w)->{})
+            .setPositiveButton(R.string.sign,(d,w)->{})
+            .create();
+        alert.setOnShowListener(d->{
+            alert.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener(v->pad.clear());
+            alert.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v->{
+                if(!pad.signed()) {Toast.makeText(this,R.string.sign_empty,Toast.LENGTH_SHORT).show();return;}
+                try {
+                    File file=File.createTempFile("pdf_signature_",".png",getCacheDir());
+                    Bitmap bmp=pad.signature();
+                    try(FileOutputStream stream=new FileOutputStream(file)) {
+                        if(!bmp.compress(Bitmap.CompressFormat.PNG,100,stream)) {
+                            throw new java.io.IOException("Could not encode signature.");
+                        }
+                    } finally {bmp.recycle();}
+                    parameter=file.getAbsolutePath();
+                    alert.dismiss();
+                    createDestination();
+                } catch(Exception ex) {error(getString(R.string.action_failed)+"\\n"+ex.getMessage());}
+            });
+        });
+        alert.show();
     }
 
     private void requestRange() {
@@ -493,6 +577,7 @@ public class MainActivity extends Activity {
             case IMAGE_TO_PDF: name="Images"; break;
             case PDF_TO_IMAGE: name="PDF_images"; break;
             case PDF_TO_TEXT: name="Extracted_text"; break;
+            case SIGN: name="Signed"; break;
         }
         String time=new SimpleDateFormat("yyyyMMdd_HHmmss",Locale.US).format(new java.util.Date());
         Intent save=new Intent(Intent.ACTION_CREATE_DOCUMENT);
