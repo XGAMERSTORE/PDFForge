@@ -10,6 +10,19 @@ Native Android app built in Java. Modern dark/light dashboard, English-first loc
 - Render PDF pages to PNG images inside ZIP
 - Extract searchable text into TXT
 - Draw a visible handwritten signature on the last PDF page (not a cryptographic digital signature)
+- Word (.docx) → PDF, PDF → editable Word (.docx), and DOCX → plain text
+- Plain text (.txt) → PDF
+- Excel (.xlsx) → PDF and CSV; CSV → Excel (.xlsx) or PDF
+- PowerPoint (.pptx) → PDF
+
+### Fidelity and supported formats
+Office files are handled **entirely offline**. Version 1.1 offers practical *content conversions*, not pixel-perfect Microsoft Office reproduction:
+- DOCX → PDF converts paragraphs, headings and simple tables. Exact fonts, images, complex tables, headers, footers and layout are not guaranteed.
+- PDF → DOCX makes an editable Word document from **extractable text**. It does not reproduce the original layout and does not OCR scanned pages.
+- XLSX conversions use **the first worksheet** and the stored cell values; formulas are not recalculated.
+- PPTX → PDF exports **slide text**, not slide artwork, charts, backgrounds or animations.
+- New tools accept DOCX, XLSX, PPTX, TXT, CSV and PDF. Legacy binary DOC, XLS, PPT formats are not supported.
+- For precise layout preservation, use Microsoft Office or LibreOffice to export as PDF before using PDFForge.
 - Recent documents, Storage Access Framework, dark mode, device-language support
 
 Works completely offline. No account, no advertising SDK, no analytics, no INTERNET permission. Uses [PdfBox-Android](https://github.com/TomRoush/PdfBox-Android) (Apache 2.0).

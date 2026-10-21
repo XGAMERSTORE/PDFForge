@@ -410,7 +410,7 @@ public class MainActivity extends Activity {
         about.setBackground(outlined(panel(),18,border())); c.addView(about,lp(-1,-2));
         about.addView(label(R.string.about,16,true,ink()));
         about.addView(gap(8)); about.addView(label(R.string.about_desc,13,false,secondary()));
-        about.addView(gap(8)); about.addView(text("Version 1.0.0 · Android 8+",12,false,secondary()));
+        about.addView(gap(8)); about.addView(text("Version 1.1.0 · Android 8+",12,false,secondary()));
         c.addView(gap(18));
         TextView note=label(R.string.disclaimer,12,false,secondary());
         note.setLineSpacing(dp(3),1f); c.addView(note);
