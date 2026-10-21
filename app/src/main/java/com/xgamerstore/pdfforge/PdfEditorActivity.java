@@ -99,7 +99,7 @@ public class PdfEditorActivity extends Activity {
         PDFBoxResourceLoader.init(getApplicationContext());
         billing=new BillingManager(this,new BillingManager.Listener(){
             @Override public void changed(){
-                if(!billing.isPremium() && editing){editing=false;mode=Mode.VIEW;}
+                if(!hasTestAccess() && editing){editing=false;mode=Mode.VIEW;}
                 if(!isFinishing()&&!busy)drawUI();
             }
             @Override public void message(int res){
@@ -196,7 +196,7 @@ public class PdfEditorActivity extends Activity {
         head.addView(edit,size(-2,42));
         edit.setOnClickListener(v->{
             if(editing){editing=false;mode=Mode.VIEW;drawUI();return;}
-            if(!billing.isPremium()){upgrade();return;}
+            if(!hasTestAccess()){upgrade();return;}
             editing=true;mode=Mode.VIEW;drawUI();
         });
         if(busy){
@@ -221,7 +221,7 @@ public class PdfEditorActivity extends Activity {
         pill(pageNav,"−",()->zoom(-0.25f),43);
         pill(pageNav,"+",()->zoom(0.25f),43);
         pill(pageNav,"›",()->next(1),55);
-        if(editing && billing.isPremium() && !busy){
+        if(editing && hasTestAccess() && !busy){
             editToolbar();
         }else{
             LinearLayout info=vertical();
@@ -231,7 +231,7 @@ public class PdfEditorActivity extends Activity {
             hint.setGravity(Gravity.CENTER);
             info.addView(hint);
             space(info,8);
-            if(!billing.isPremium()){
+            if(!hasTestAccess()){
                 TextView unlock=label(getString(R.string.viewer_unlock)+" ✦",15,Color.WHITE,true);
                 unlock.setGravity(Gravity.CENTER);
                 unlock.setBackground(background(PURPLE,15));
@@ -383,7 +383,7 @@ public class PdfEditorActivity extends Activity {
         return false;
     }
     private void save(){
-        if(!billing.isPremium()){upgrade();return;}
+        if(!hasTestAccess()){upgrade();return;}
         if(!changed()){Toast.makeText(this,R.string.viewer_nothing,Toast.LENGTH_SHORT).show();return;}
         Intent create=new Intent(Intent.ACTION_CREATE_DOCUMENT);
         create.addCategory(Intent.CATEGORY_OPENABLE);
@@ -397,7 +397,7 @@ public class PdfEditorActivity extends Activity {
         super.onActivityResult(request,result,data);
         if(request!=SAVE_REQUEST||result!=RESULT_OK||data==null||data.getData()==null)return;
         Uri output=data.getData();
-        if(!billing.isPremium()){upgrade();return;}
+        if(!hasTestAccess()){upgrade();return;}
         busy=true;drawUI();
         worker.execute(()->{
             Throwable problem=null;
@@ -609,6 +609,13 @@ public class PdfEditorActivity extends Activity {
             }
             return true;
         }
+    }
+
+    /** Local developer builds have editing enabled for feature tests. Production uses Play entitlements. */
+    private boolean hasTestAccess(){
+        boolean development=(getApplicationInfo().flags
+                & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE)!=0;
+        return development || billing.isPremium();
     }
 
     @Override protected void onDestroy(){

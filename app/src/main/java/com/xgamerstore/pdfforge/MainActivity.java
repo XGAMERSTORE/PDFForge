@@ -229,7 +229,7 @@ public class MainActivity extends Activity {
     private void homePage(LinearLayout c) {
         hero(c);
         c.addView(gap(14));
-        if(!billing.isPremium()) premiumTeaser(c);
+        if(!hasTestAccess()) premiumTeaser(c);
         c.addView(gap(24));
         header(c,R.string.popular_tools);
         c.addView(gap(13));
@@ -311,7 +311,7 @@ public class MainActivity extends Activity {
                 tile.addView(icon,lp(45,45));
                 tile.addView(gap(14));
                 TextView name=text(getString(tool.title)
-                    +(tool.isPremium()&&!billing.isPremium()?"  ✦":""),14,true,ink());
+                    +(tool.isPremium()&&!hasTestAccess()?"  ✦":""),14,true,ink());
                 name.setMaxLines(2);
                 tile.addView(name,lp(-1,-2));
                 tile.addView(gap(5));
@@ -483,9 +483,9 @@ public class MainActivity extends Activity {
         row.addView(symbol,lp(48,48));
         LinearLayout titles=vertical();inset(titles,13,0,0,0);
         row.addView(titles,new LinearLayout.LayoutParams(0,-2,1f));
-        titles.addView(label(billing.isPremium()?R.string.premium_active:R.string.premium_title,16,true,ink()));
+        titles.addView(label(hasTestAccess()?R.string.premium_active:R.string.premium_title,16,true,ink()));
         titles.addView(gap(4));
-        titles.addView(label(billing.isPremium()?R.string.premium_active_desc:R.string.premium_teaser,12,false,secondary()));
+        titles.addView(label(hasTestAccess()?R.string.premium_active_desc:R.string.premium_teaser,12,false,secondary()));
         TextView arrow=text("→",24,true,accent());
         arrow.setGravity(Gravity.CENTER);row.addView(arrow,lp(28,42));
         row.setOnClickListener(v->{tab=4;draw();});
@@ -516,7 +516,7 @@ public class MainActivity extends Activity {
             c.addView(gap(7));
         }
         c.addView(gap(14));
-        if(billing.isPremium()){
+        if(hasTestAccess()){
             TextView active=label(R.string.premium_active,17,true,0xFF10A980);
             active.setGravity(Gravity.CENTER);
             active.setBackground(outlined(panel(),15,border()));
@@ -564,7 +564,7 @@ public class MainActivity extends Activity {
     }
 
     private void chooseTool(Tool tool) {
-        if(tool.isPremium() && !billing.isPremium()){
+        if(tool.isPremium() && !hasTestAccess()){
             new AlertDialog.Builder(this)
                 .setTitle(R.string.premium_title)
                 .setMessage(R.string.premium_locked)
@@ -787,7 +787,7 @@ public class MainActivity extends Activity {
     }
 
     private void execute(Uri output) {
-        if(pending.isPremium()&&!billing.isPremium()){
+        if(pending.isPremium()&&!hasTestAccess()){
             tab=4;draw();
             Toast.makeText(this,R.string.premium_locked,Toast.LENGTH_LONG).show();
             return;
@@ -889,6 +889,13 @@ public class MainActivity extends Activity {
     @Override protected void onResume(){
         super.onResume();
         if(billing!=null)billing.refresh();
+    }
+
+    /** Local developer builds have editing enabled for feature tests. Production uses Play entitlements. */
+    private boolean hasTestAccess(){
+        boolean development=(getApplicationInfo().flags
+                & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE)!=0;
+        return development || billing.isPremium();
     }
 
     @Override protected void onDestroy() {
