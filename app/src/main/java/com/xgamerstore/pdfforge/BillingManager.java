@@ -11,7 +11,7 @@ import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.PendingPurchasesParams;
 import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.Purchase;
-import com.android.billingclient.api.PurchasesUpdatedListener;
+
 import com.android.billingclient.api.QueryProductDetailsParams;
 import com.android.billingclient.api.QueryPurchasesParams;
 
@@ -37,6 +37,8 @@ final class BillingManager {
     private boolean purchased;
     private boolean connecting;
     private boolean disposed;
+    private boolean loadingProduct;
+    private int availabilityMessage=R.string.premium_connecting;
 
     BillingManager(Activity activity,Listener listener) {
         this.activity=activity;
@@ -66,6 +68,9 @@ final class BillingManager {
         if(offers==null || offers.isEmpty())return null;
         return offers.get(0).getFormattedPrice();
     }
+    boolean isLoading(){return connecting || loadingProduct;}
+    int availabilityMessage(){return availabilityMessage;}
+
     boolean canBuy(){
         return client.isReady() && product!=null && price()!=null;
     }
@@ -73,16 +78,23 @@ final class BillingManager {
     void connect(){
         if(disposed||client.isReady()||connecting)return;
         connecting=true;
+        availabilityMessage=R.string.premium_connecting;
+        notifyChanged();
         client.startConnection(new BillingClientStateListener(){
             @Override public void onBillingSetupFinished(BillingResult result){
                 connecting=false;
                 if(disposed)return;
                 if(result.getResponseCode()==BillingClient.BillingResponseCode.OK){
-                    refresh();loadProduct();
-                }else notifyChanged();
+                    refresh();
+                }else {
+                    availabilityMessage=R.string.premium_connection_failed;
+                    notifyChanged();
+                }
             }
             @Override public void onBillingServiceDisconnected(){
                 connecting=false;
+                product=null;
+                availabilityMessage=R.string.premium_connection_failed;
                 notifyChanged();
             }
         });
@@ -91,6 +103,7 @@ final class BillingManager {
     void refresh(){
         if(disposed)return;
         if(!client.isReady()){connect();return;}
+        loadProduct();
         client.queryPurchasesAsync(QueryPurchasesParams.newBuilder()
                 .setProductType(BillingClient.ProductType.INAPP).build(),(result,purchases)->{
             if(disposed)return;
@@ -122,6 +135,11 @@ final class BillingManager {
     }
 
     private void loadProduct(){
+        if(disposed || loadingProduct)return;
+        loadingProduct=true;
+        product=null;
+        availabilityMessage=R.string.premium_connecting;
+        notifyChanged();
         QueryProductDetailsParams params=QueryProductDetailsParams.newBuilder()
             .setProductList(Collections.singletonList(QueryProductDetailsParams.Product.newBuilder()
                     .setProductId(PRODUCT_ID)
@@ -129,18 +147,26 @@ final class BillingManager {
             .build();
         client.queryProductDetailsAsync(params,(result,data)->{
             if(disposed)return;
+            loadingProduct=false;
             if(result.getResponseCode()==BillingClient.BillingResponseCode.OK){
                 product=null;
                 for(ProductDetails found:data.getProductDetailsList())
                     if(PRODUCT_ID.equals(found.getProductId())){product=found;break;}
+                availabilityMessage=R.string.premium_offer_unavailable;
+            }else {
+                availabilityMessage=R.string.premium_connection_failed;
             }
             notifyChanged();
         });
     }
 
     void purchase(){
+        if(disposed)return;
         if(purchased){notifyMessage(R.string.premium_already_owned);return;}
-        if(!canBuy()){notifyMessage(R.string.premium_not_available);connect();return;}
+        if(!canBuy()){
+            if(!isLoading())refresh();
+            return;
+        }
         List<ProductDetails.OneTimePurchaseOfferDetails> offers=product.getOneTimePurchaseOfferDetailsList();
         String offerToken=offers.get(0).getOfferToken();
         BillingFlowParams.ProductDetailsParams.Builder detail=BillingFlowParams.ProductDetailsParams
@@ -149,8 +175,13 @@ final class BillingManager {
         BillingFlowParams flow=BillingFlowParams.newBuilder()
                 .setProductDetailsParamsList(Collections.singletonList(detail.build())).build();
         BillingResult result=client.launchBillingFlow(activity,flow);
-        if(result.getResponseCode()!=BillingClient.BillingResponseCode.OK)
+        if(result.getResponseCode()==BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED){
+            refresh();
+        }else if(result.getResponseCode()!=BillingClient.BillingResponseCode.OK
+                && result.getResponseCode()!=BillingClient.BillingResponseCode.USER_CANCELED){
             notifyMessage(R.string.premium_purchase_failed);
+            refresh();
+        }
     }
 
     void restore(){

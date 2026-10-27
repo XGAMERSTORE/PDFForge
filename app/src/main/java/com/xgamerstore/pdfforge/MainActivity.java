@@ -523,14 +523,22 @@ public class MainActivity extends Activity {
             c.addView(active,lp(-1,56));
         }else{
             String price=billing.price();
-            String buyText=price==null?getString(R.string.premium_not_available)
+            String buyText=!billing.canBuy()?getString(billing.isLoading()
+                    ?R.string.premium_connecting:R.string.premium_retry)
                     :getString(R.string.premium_buy)+" · "+price;
             TextView buy=text(buyText,16,true,Color.WHITE);
             buy.setGravity(Gravity.CENTER);
             buy.setBackground(shape(0xFF6954E8,15));
-            buy.setAlpha(billing.canBuy()?1f:0.55f);
+            buy.setEnabled(!billing.isLoading());
+            buy.setAlpha(billing.isLoading()?0.55f:1f);
             c.addView(buy,lp(-1,54));
             buy.setOnClickListener(v->billing.purchase());
+            if(!billing.canBuy()){
+                c.addView(gap(8));
+                TextView status=label(billing.availabilityMessage(),13,false,secondary());
+                status.setGravity(Gravity.CENTER);
+                c.addView(status);
+            }
         }
         c.addView(gap(11));
         TextView restore=label(R.string.premium_restore,14,true,accent());
