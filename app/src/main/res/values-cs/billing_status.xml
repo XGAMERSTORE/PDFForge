@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="premium_retry">Znovu načíst nákup</string>
+    <string name="premium_connection_failed">Nepodařilo se spojit s Google Play. Zkontrolujte připojení a zkuste to znovu.</string>
+    <string name="premium_offer_unavailable">Google Play nevrátil dostupnou nabídku Premium pro tento účet. Zkontrolujte instalaci aplikace, účet a dostupnost produktu v Play Console.</string>
+</resources>

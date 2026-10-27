@@ -2,7 +2,7 @@
 
 Native Android app built in Java. Modern dark/light dashboard, English-first localization, offline document processing.
 
-## Features (PDFForge 1.0.0)
+## Features (PDFForge 1.0.1)
 - Merge PDFs while retaining original text and vector content where possible
 - Split a PDF into separate pages, bundled into ZIP
 - Extract selected page ranges and rotate any pages
@@ -49,11 +49,10 @@ PDF editing is intentionally a **non-destructive overlay** editor: you can add a
 ## Play Store, target API, build-size reduction
 
 - `compileSdk 36`, `targetSdk 36`, Android Gradle Plugin 8.11.2, Gradle 8.13, JDK 17.
-- Requested version: `versionCode 1` / `versionName 1.0.0`.
-- **Google Play warning:** if a previous AAB with version code 4 was uploaded to the same app, code 1 may be rejected; an unused higher version code is required. Do not silently increase the requested version code.
+- Requested version: `versionCode 2` / `versionName 1.0.1`.
 - Release has R8 code shrinking, optimization, obfuscation and Android resource shrinking enabled.
 - R8 uses the Android optimized default ProGuard rules plus project-specific safety rules.
-- Keep debug builds unminified for Premium development testing. Release builds MUST NOT unlock Premium without a Play entitlement.
+- Debug and release builds both require a Play-confirmed Premium entitlement. Debug builds remain unminified, but no longer unlock Premium automatically. Test real billing using a signed release installed through a Google Play test track.
 - Production AAB is unsigned until a private release upload key is provided. Google Play updates must use the correct signing key.
 - Targeting Android 16 / API 36 can alter edge-to-edge behavior on Android 15+ devices. Test the built-in PDF reader, editor and navigation UI on a real device.
 

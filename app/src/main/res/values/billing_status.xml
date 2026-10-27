@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="premium_retry">Retry loading purchase</string>
+    <string name="premium_connection_failed">Could not connect to Google Play. Check your connection and try again.</string>
+    <string name="premium_offer_unavailable">Google Play returned no purchasable Premium offer for this account. Check the app installation, account and product availability in Play Console.</string>
+</resources>
