@@ -53,7 +53,7 @@ PDF editing is intentionally a **non-destructive overlay** editor: you can add a
 - **Google Play warning:** if a previous AAB with version code 4 was uploaded to the same app, code 1 may be rejected; an unused higher version code is required. Do not silently increase the requested version code.
 - Release has R8 code shrinking, optimization, obfuscation and Android resource shrinking enabled.
 - R8 uses the Android optimized default ProGuard rules plus project-specific safety rules.
-- Keep debug builds unminified for Premium development testing. Release builds MUST NOT unlock Premium without a Play entitlement.
+- Debug and release builds both require a Play-confirmed Premium entitlement. Debug builds remain unminified, but no longer unlock Premium automatically. Test real billing using a signed release installed through a Google Play test track.
 - Production AAB is unsigned until a private release upload key is provided. Google Play updates must use the correct signing key.
 - Targeting Android 16 / API 36 can alter edge-to-edge behavior on Android 15+ devices. Test the built-in PDF reader, editor and navigation UI on a real device.
 
